@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Much Flooring for a 12&times;12 Room? (Costs &amp; Calculator)</title>
+<meta name="description" content="A 12&times;12 room needs 144 sq ft of flooring (159 sq ft with waste). See costs by flooring type, common room sizes, and use our free calculator for exact estimates.">
+<link rel="canonical" href="https://howmuchflooring.com/how-much-flooring-for-12x12-room.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+    --primary: #2563eb; --primary-dark: #1d4ed8; --bg: #f8fafc; --card: #ffffff;
+    --text: #1e293b; --text-light: #64748b; --border: #e2e8f0; --success: #16a34a; --accent: #f59e0b;
+}
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+header { background: var(--primary); color: white; padding: 16px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.3rem; font-weight: 700; text-decoration: none; color: white; }
+.logo span { color: #fbbf24; }
+nav a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 24px; font-size: 0.9rem; font-weight: 500; }
+nav a:hover { color: white; }
+.breadcrumb { padding: 12px 0; font-size: 0.85rem; color: var(--text-light); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.hero { text-align: center; padding: 48px 20px 32px; }
+.hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+.hero h1 span { color: var(--primary); }
+.hero p { color: var(--text-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.ad-slot { background: #f1f5f9; border: 2px dashed var(--border); border-radius: 8px; padding: 20px; text-align: center; color: var(--text-light); font-size: 0.85rem; margin: 24px auto; max-width: 728px; }
+.calc-section { padding: 32px 0; }
+.calc-card { background: var(--card); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 32px; max-width: 800px; margin: 0 auto; }
+.calc-card h2 { font-size: 1.5rem; margin-bottom: 24px; text-align: center; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.form-group .hint { font-size: 0.75rem; color: var(--text-light); margin-bottom: 4px; }
+.input-wrap { position: relative; }
+.input-wrap input, .input-wrap select { width: 100%; padding: 12px 14px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.2s; background: white; }
+.input-wrap input:focus, .input-wrap select:focus { outline: none; border-color: var(--primary); }
+.unit-label { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-light); font-size: 0.85rem; pointer-events: none; }
+.btn-calc { display: block; width: 100%; padding: 14px; margin-top: 24px; background: var(--primary); color: white; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+.btn-calc:hover { background: var(--primary-dark); }
+.results { display: none; margin-top: 28px; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.result-box { background: #f0f9ff; border-radius: 12px; padding: 20px; text-align: center; }
+.result-box.highlight { background: #ecfdf5; border: 2px solid var(--success); }
+.result-box .label { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.result-box .value { font-size: 1.8rem; font-weight: 700; color: var(--text); margin-top: 4px; }
+.result-box .sub { font-size: 0.85rem; color: var(--text-light); margin-top: 2px; }
+.info-section { padding: 48px 0; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+.info-card { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+.info-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--primary); }
+.info-card p, .info-card li { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+.info-card ul { padding-left: 20px; }
+.info-card li { margin-bottom: 6px; }
+.faq-section { padding: 48px 0; background: white; }
+.faq-section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 32px; }
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q { padding: 18px 0; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.faq-q::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+.faq-q.open::after { content: '\2212'; }
+.faq-a { padding: 0 0 18px; color: var(--text-light); font-size: 0.9rem; display: none; line-height: 1.7; }
+.faq-a.open { display: block; }
+footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 32px 0; text-align: center; font-size: 0.85rem; }
+footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+@media (max-width: 768px) { .hero h1 { font-size: 1.6rem; } .calc-card { padding: 20px; } nav { display: none; } }
+
+.cost-table { width: 100%; border-collapse: collapse; margin: 24px auto; max-width: 900px; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.cost-table th { background: var(--primary); color: white; padding: 14px 16px; text-align: left; font-size: 0.85rem; font-weight: 600; }
+.cost-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text); }
+.cost-table tr:last-child td { border-bottom: none; }
+.cost-table tr:nth-child(even) { background: #f8fafc; }
+.cost-table tr:hover { background: #f0f9ff; }
+@media (max-width: 600px) { .cost-table { font-size: 0.8rem; } .cost-table th, .cost-table td { padding: 8px 10px; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "12\u00d712 Room Flooring Calculator",
+  "url": "https://howmuchflooring.com/how-much-flooring-for-12x12-room.html",
+  "description": "Calculate how much flooring you need for a 12\u00d712 room. Get cost estimates by flooring type with our free calculator.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much flooring do I need for a 12\u00d712 room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You need 144 sq ft of flooring. Add 10% for waste (standard recommendation), bringing the total to 159 sq ft. For diagonal or complex patterns, add 15-20% instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to floor a 12\u00d712 room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Material costs range from $240 for budget carpet to $1,270 for mid-range hardwood. Including installation: $400 (carpet) to $2,700 (premium hardwood). Vinyl plank is the best value at $636\u2013$1,590 total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tiles do I need for a 12\u00d712 room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For 12\u00d712 inch tiles: 159 tiles. For 18\u00d718 tiles: 71 tiles. For 24\u00d724 tiles: 40 tiles. All figures include 10% waste factor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many boxes of laminate for a 12\u00d712 room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Assuming 24 sq ft per box: 159 \u00f7 24 = 7 boxes (rounded up). Always check the coverage listed on your specific product \u2014 it varies by brand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a 12\u00d712 room big enough for a bedroom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 144 sq ft is a standard bedroom size. It comfortably fits a queen bed with nightstands and a dresser. Average US bedrooms range from 100\u2013200 sq ft."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://howmuchflooring.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "12\u00d712 Room Flooring Guide",
+      "item": "https://howmuchflooring.com/how-much-flooring-for-12x12-room.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header><div class="container"><a href="/" class="logo">HowMuch<span>Flooring</span>.com</a><nav><a href="/">Home</a><a href="/tile-calculator.html">Tile</a><a href="/hardwood-calculator.html">Hardwood</a><a href="/vinyl-calculator.html">Vinyl</a><a href="/carpet-calculator.html">Carpet</a><a href="/laminate-calculator.html">Laminate</a></nav></div></header>
+
+<div class="container">
+  <div class="breadcrumb"><a href="/">Home</a> &rsaquo; 12&times;12 Room Flooring Guide</div>
+</div>
+
+<section class="hero">
+  <h1>How Much Flooring for a <span>12&times;12 Room</span>?</h1>
+  <p>Quick answer: 144 sq ft + 10% waste = 159 sq ft. Get cost breakdowns by flooring type and calculate your exact room below.</p>
+</section>
+
+<div class="ad-slot">Advertisement</div>
+
+<section class="calc-section">
+  <div class="container">
+    <div class="calc-card" style="border: 2px solid var(--success);">
+      <h2>&#128200; 12&times;12 Room &mdash; Quick Answer</h2>
+      <p style="text-align:center; color: var(--text-light); margin-bottom: 24px;">A 12&times;12 room is <strong>144 square feet</strong>. With a standard 10% waste factor, you need approximately <strong>159 sq ft</strong> of flooring material.</p>
+      <div class="results-grid">
+        <div class="result-box highlight">
+          <div class="label">Room Area</div>
+          <div class="value">144 sq ft</div>
+          <div class="sub">12 &times; 12 feet</div>
+        </div>
+        <div class="result-box">
+          <div class="label">With 10% Waste</div>
+          <div class="value">159 sq ft</div>
+          <div class="sub">Recommended minimum</div>
+        </div>
+        <div class="result-box">
+          <div class="label">With 15% Waste</div>
+          <div class="value">166 sq ft</div>
+          <div class="sub">Diagonal patterns</div>
+        </div>
+        <div class="result-box">
+          <div class="label">With 20% Waste</div>
+          <div class="value">173 sq ft</div>
+          <div class="sub">Complex layouts</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calc-section">
+  <div class="container">
+    <h2 style="text-align:center; font-size:1.5rem; margin-bottom:16px;">12&times;12 Room Flooring Costs (Based on 159 sq ft)</h2>
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>Flooring Type</th>
+          <th>Cost/sq ft</th>
+          <th>Material Cost</th>
+          <th>Installation</th>
+          <th>Total Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ceramic Tile</td>
+          <td>$1.50&ndash;$5</td>
+          <td>$239&ndash;$795</td>
+          <td>$636&ndash;$1,113</td>
+          <td>$875&ndash;$1,908</td>
+        </tr>
+        <tr>
+          <td>Porcelain Tile</td>
+          <td>$3&ndash;$8</td>
+          <td>$477&ndash;$1,272</td>
+          <td>$636&ndash;$1,113</td>
+          <td>$1,113&ndash;$2,385</td>
+        </tr>
+        <tr>
+          <td>Hardwood (Oak)</td>
+          <td>$4&ndash;$8</td>
+          <td>$636&ndash;$1,272</td>
+          <td>$636&ndash;$1,431</td>
+          <td>$1,272&ndash;$2,703</td>
+        </tr>
+        <tr>
+          <td>Vinyl Plank (LVP)</td>
+          <td>$2&ndash;$5</td>
+          <td>$318&ndash;$795</td>
+          <td>$318&ndash;$795</td>
+          <td>$636&ndash;$1,590</td>
+        </tr>
+        <tr>
+          <td>Carpet (w/pad)</td>
+          <td>$1.50&ndash;$4.50</td>
+          <td>$239&ndash;$716</td>
+          <td>$159&ndash;$477</td>
+          <td>$398&ndash;$1,193</td>
+        </tr>
+        <tr>
+          <td>Laminate</td>
+          <td>$1.50&ndash;$5</td>
+          <td>$239&ndash;$795</td>
+          <td>$318&ndash;$795</td>
+          <td>$557&ndash;$1,590</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="calc-section">
+  <div class="container">
+    <h2 style="text-align:center; font-size:1.5rem; margin-bottom:16px;">Common Room Sizes &amp; Flooring Needed</h2>
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>Room Size</th>
+          <th>Area (sq ft)</th>
+          <th>With 10% Waste</th>
+          <th>Material Cost Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10&times;10</td>
+          <td>100</td>
+          <td>110 sq ft</td>
+          <td>$165&ndash;$1,320</td>
+        </tr>
+        <tr>
+          <td>10&times;12</td>
+          <td>120</td>
+          <td>132 sq ft</td>
+          <td>$198&ndash;$1,584</td>
+        </tr>
+        <tr>
+          <td>12&times;12</td>
+          <td>144</td>
+          <td>159 sq ft</td>
+          <td>$239&ndash;$1,908</td>
+        </tr>
+        <tr>
+          <td>12&times;14</td>
+          <td>168</td>
+          <td>185 sq ft</td>
+          <td>$278&ndash;$2,220</td>
+        </tr>
+        <tr>
+          <td>14&times;16</td>
+          <td>224</td>
+          <td>247 sq ft</td>
+          <td>$371&ndash;$2,964</td>
+        </tr>
+        <tr>
+          <td>15&times;15</td>
+          <td>225</td>
+          <td>248 sq ft</td>
+          <td>$372&ndash;$2,976</td>
+        </tr>
+        <tr>
+          <td>16&times;20</td>
+          <td>320</td>
+          <td>352 sq ft</td>
+          <td>$528&ndash;$4,224</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="ad-slot">Advertisement</div>
+
+<section class="calc-section" id="calculator">
+  <div class="container">
+    <div class="calc-card">
+      <h2>&#128221; Custom Room Calculator</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="roomLength">Room Length</label>
+          <div class="input-wrap">
+            <input type="number" id="roomLength" step="0.1" value="12" min="0">
+            <span class="unit-label" id="lengthUnit">ft</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="roomWidth">Room Width</label>
+          <div class="input-wrap">
+            <input type="number" id="roomWidth" step="0.1" value="12" min="0">
+            <span class="unit-label" id="widthUnit">ft</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="unit">Unit</label>
+          <div class="input-wrap">
+            <select id="unit">
+              <option value="feet">Feet</option>
+              <option value="meters">Meters</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="flooringType">Flooring Type</label>
+          <div class="input-wrap">
+            <select id="flooringType">
+              <option value="ceramic">Ceramic Tile</option>
+              <option value="porcelain">Porcelain Tile</option>
+              <option value="hardwood">Hardwood (Oak)</option>
+              <option value="vinyl">Vinyl Plank (LVP)</option>
+              <option value="carpet">Carpet</option>
+              <option value="laminate">Laminate</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="wasteFactor">Waste Factor</label>
+          <div class="input-wrap">
+            <select id="wasteFactor">
+              <option value="0.10">10%</option>
+              <option value="0.15">15%</option>
+              <option value="0.20">20%</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="pricePerSqft">Price per sq ft</label>
+          <div class="hint">Optional &mdash; for cost estimate</div>
+          <div class="input-wrap">
+            <input type="number" id="pricePerSqft" step="0.01" min="0" placeholder="e.g. 3.50">
+            <span class="unit-label">$/ft&sup2;</span>
+          </div>
+        </div>
+      </div>
+      <button class="btn-calc" onclick="calculateFlooring()">Calculate Flooring Needed</button>
+
+      <div class="results" id="results">
+        <div class="results-grid">
+          <div class="result-box highlight">
+            <div class="label">Room Area</div>
+            <div class="value" id="resArea">&mdash;</div>
+            <div class="sub" id="resAreaSub"></div>
+          </div>
+          <div class="result-box">
+            <div class="label">With Waste</div>
+            <div class="value" id="resWaste">&mdash;</div>
+            <div class="sub" id="resWasteSub"></div>
+          </div>
+          <div class="result-box">
+            <div class="label">Material Cost</div>
+            <div class="value" id="resMaterial">&mdash;</div>
+            <div class="sub" id="resMaterialSub"></div>
+          </div>
+          <div class="result-box">
+            <div class="label">Est. Installation</div>
+            <div class="value" id="resInstall">&mdash;</div>
+            <div class="sub" id="resInstallSub"></div>
+          </div>
+          <div class="result-box highlight">
+            <div class="label">Total Estimate</div>
+            <div class="value" id="resTotal">&mdash;</div>
+            <div class="sub" id="resTotalSub"></div>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:20px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <button onclick="shareResults()" style="padding:10px 24px; background:var(--primary); color:white; border:none; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.9rem;">&#128203; Copy Results</button>
+          <button onclick="window.print()" style="padding:10px 24px; background:var(--text-light); color:white; border:none; border-radius:8px; cursor:pointer; font-weight:600; font-size:0.9rem;">&#128424; Print</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info-section">
+  <div class="container">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>&#128207; Quick Size Reference</h3>
+        <p>A 12&times;12 room is <strong>144 sq ft</strong> (16 sq yards), common for bedrooms and home offices. Other names: 12-by-12, twelve by twelve.</p>
+        <p style="margin-top:8px;">Metric: approximately 3.66m &times; 3.66m = 13.4 sq meters.</p>
+      </div>
+      <div class="info-card">
+        <h3>&#128207; How to Measure Accurately</h3>
+        <ul>
+          <li>Measure at baseboard level</li>
+          <li>Measure twice</li>
+          <li>Include closet floors</li>
+          <li>Round up to nearest inch</li>
+          <li>For oddly shaped rooms, split into rectangles</li>
+          <li>Note door openings and transitions</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>&#128176; Money-Saving Tips</h3>
+        <ul>
+          <li>Buy during holiday sales (Memorial Day, Black Friday)</li>
+          <li>Consider remnants for small rooms</li>
+          <li>DIY installation saves $2&ndash;$8/sqft</li>
+          <li>Compare big-box stores vs. specialty shops</li>
+          <li>Buy 10% extra from same dye lot</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">How much flooring do I need for a 12&times;12 room?</div>
+        <div class="faq-a">You need 144 sq ft of flooring. Add 10% for waste (standard recommendation), bringing the total to 159 sq ft. For diagonal or complex patterns, add 15&ndash;20% instead.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How much does it cost to floor a 12&times;12 room?</div>
+        <div class="faq-a">Material costs range from $240 for budget carpet to $1,270 for mid-range hardwood. Including installation: $400 (carpet) to $2,700 (premium hardwood). Vinyl plank is the best value at $636&ndash;$1,590 total.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How many tiles do I need for a 12&times;12 room?</div>
+        <div class="faq-a">For 12&times;12 inch tiles: 159 tiles. For 18&times;18 tiles: 71 tiles. For 24&times;24 tiles: 40 tiles. (All figures include 10% waste factor.)</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How many boxes of laminate for a 12&times;12 room?</div>
+        <div class="faq-a">Assuming 24 sq ft per box: 159 &divide; 24 = 7 boxes (rounded up). Always check the coverage listed on your specific product &mdash; it varies by brand.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is a 12&times;12 room big enough for a bedroom?</div>
+        <div class="faq-a">Yes, 144 sq ft is a standard bedroom size. It comfortably fits a queen bed with nightstands and a dresser. Average US bedrooms range from 100&ndash;200 sq ft.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ad-slot">Advertisement</div>
+
+<footer><div class="container">
+<p style="margin-bottom:12px"><strong>Calculators:</strong> <a href="/tile-calculator.html">Tile</a> &middot; <a href="/hardwood-calculator.html">Hardwood</a> &middot; <a href="/vinyl-calculator.html">Vinyl</a> &middot; <a href="/carpet-calculator.html">Carpet</a> &middot; <a href="/laminate-calculator.html">Laminate</a></p>
+<p style="margin-bottom:12px"><strong>Guides:</strong> <a href="/bathroom-flooring.html">Bathroom</a> &middot; <a href="/kitchen-flooring.html">Kitchen</a> &middot; <a href="/bedroom-flooring.html">Bedroom</a> &middot; <a href="/how-much-flooring-for-12x12-room.html">12&times;12 Room</a> &middot; <a href="/flooring-cost-per-square-foot.html">Cost Guide</a></p>
+<p>&copy; 2025 HowMuchFlooring.com &mdash; Free Flooring Calculator</p>
+<p style="margin-top:8px">Built with &#10084;&#65039; to help homeowners plan smarter. Estimates are approximate &mdash; always verify with your contractor.</p>
+<p style="margin-top:8px">&#127463;&#127479; Reformando no Brasil? Visite <a href="https://quantopreciso.com" target="_blank" style="color:#fbbf24">QuantoPreciso.com</a> &mdash; calculadoras gratuitas para obra e reforma.</p>
+</div></footer>
+
+<script>
+var installRates = {
+  ceramic:   [4, 7],
+  porcelain: [4, 7],
+  hardwood:  [4, 9],
+  vinyl:     [2, 5],
+  carpet:    [1, 3],
+  laminate:  [2, 5]
+};
+
+function fmt(n) {
+  return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+}
+
+function fmtCurrency(n) {
+  return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+}
+
+function calculateFlooring() {
+  var length = parseFloat(document.getElementById('roomLength').value);
+  var width = parseFloat(document.getElementById('roomWidth').value);
+  var unit = document.getElementById('unit').value;
+  var flooringType = document.getElementById('flooringType').value;
+  var waste = parseFloat(document.getElementById('wasteFactor').value);
+  var price = parseFloat(document.getElementById('pricePerSqft').value);
+
+  if (!length || !width || length <= 0 || width <= 0) {
+    alert('Please enter valid room dimensions.');
+    return;
+  }
+
+  if (unit === 'meters') {
+    length = length * 3.281;
+    width = width * 3.281;
+  }
+
+  var area = length * width;
+  var areaWithWaste = Math.ceil(area * (1 + waste));
+  var rates = installRates[flooringType];
+  var installLow = areaWithWaste * rates[0];
+  var installHigh = areaWithWaste * rates[1];
+
+  document.getElementById('resArea').textContent = fmt(Math.round(area)) + ' sq ft';
+  document.getElementById('resAreaSub').textContent = fmt(Math.round(length)) + ' \u00d7 ' + fmt(Math.round(width)) + ' ft';
+
+  document.getElementById('resWaste').textContent = fmt(areaWithWaste) + ' sq ft';
+  document.getElementById('resWasteSub').textContent = '+' + Math.round(waste * 100) + '% waste factor';
+
+  if (price && price > 0) {
+    var materialCost = areaWithWaste * price;
+    var totalLow = materialCost + installLow;
+    var totalHigh = materialCost + installHigh;
+
+    document.getElementById('resMaterial').textContent = fmtCurrency(materialCost);
+    document.getElementById('resMaterialSub').textContent = areaWithWaste + ' sq ft \u00d7 $' + price.toFixed(2);
+
+    document.getElementById('resInstall').textContent = fmtCurrency(installLow) + '\u2013' + fmtCurrency(installHigh);
+    document.getElementById('resInstallSub').textContent = '$' + rates[0] + '\u2013$' + rates[1] + '/sq ft';
+
+    document.getElementById('resTotal').textContent = fmtCurrency(totalLow) + '\u2013' + fmtCurrency(totalHigh);
+    document.getElementById('resTotalSub').textContent = 'Material + installation';
+  } else {
+    document.getElementById('resMaterial').textContent = '\u2014';
+    document.getElementById('resMaterialSub').textContent = 'Enter price above';
+
+    document.getElementById('resInstall').textContent = fmtCurrency(installLow) + '\u2013' + fmtCurrency(installHigh);
+    document.getElementById('resInstallSub').textContent = '$' + rates[0] + '\u2013$' + rates[1] + '/sq ft';
+
+    document.getElementById('resTotal').textContent = '\u2014';
+    document.getElementById('resTotalSub').textContent = 'Enter price for total';
+  }
+
+  document.getElementById('results').style.display = 'block';
+}
+
+function shareResults() {
+  var area = document.getElementById('resArea').textContent;
+  var waste = document.getElementById('resWaste').textContent;
+  var material = document.getElementById('resMaterial').textContent;
+  var install = document.getElementById('resInstall').textContent;
+  var total = document.getElementById('resTotal').textContent;
+
+  var text = 'Flooring Estimate (HowMuchFlooring.com)\n'
+    + 'Room Area: ' + area + '\n'
+    + 'With Waste: ' + waste + '\n'
+    + 'Material Cost: ' + material + '\n'
+    + 'Installation: ' + install + '\n'
+    + 'Total Estimate: ' + total;
+
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function() {
+      alert('Results copied to clipboard!');
+    });
+  } else {
+    prompt('Copy the results below:', text);
+  }
+}
+
+document.getElementById('unit').addEventListener('change', function() {
+  var label = this.value === 'meters' ? 'm' : 'ft';
+  document.getElementById('lengthUnit').textContent = label;
+  document.getElementById('widthUnit').textContent = label;
+});
+
+document.querySelectorAll('.faq-q').forEach(function(q) {
+  q.addEventListener('click', function() {
+    this.classList.toggle('open');
+    this.nextElementSibling.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>

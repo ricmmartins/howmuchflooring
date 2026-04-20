@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bedroom Flooring — Calculator &amp; Cost Guide (2025)</title>
+<meta name="description" content="Choose the best bedroom flooring in 2025. Free calculator, cost comparisons for carpet, hardwood, vinyl &amp; laminate. Tips for comfort, noise reduction, and style.">
+<link rel="canonical" href="https://howmuchflooring.com/bedroom-flooring.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+    --primary: #2563eb; --primary-dark: #1d4ed8; --bg: #f8fafc; --card: #ffffff;
+    --text: #1e293b; --text-light: #64748b; --border: #e2e8f0; --success: #16a34a; --accent: #f59e0b;
+}
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+header { background: var(--primary); color: white; padding: 16px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.3rem; font-weight: 700; text-decoration: none; color: white; }
+.logo span { color: #fbbf24; }
+nav a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 24px; font-size: 0.9rem; font-weight: 500; }
+nav a:hover { color: white; }
+.breadcrumb { padding: 12px 0; font-size: 0.85rem; color: var(--text-light); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.hero { text-align: center; padding: 48px 20px 32px; }
+.hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+.hero h1 span { color: var(--primary); }
+.hero p { color: var(--text-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.ad-slot { background: #f1f5f9; border: 2px dashed var(--border); border-radius: 8px; padding: 20px; text-align: center; color: var(--text-light); font-size: 0.85rem; margin: 24px auto; max-width: 728px; }
+.calc-section { padding: 32px 0; }
+.calc-card { background: var(--card); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 32px; max-width: 800px; margin: 0 auto; }
+.calc-card h2 { font-size: 1.5rem; margin-bottom: 24px; text-align: center; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.form-group .hint { font-size: 0.75rem; color: var(--text-light); margin-bottom: 4px; }
+.input-wrap { position: relative; }
+.input-wrap input, .input-wrap select { width: 100%; padding: 12px 14px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.2s; background: white; }
+.input-wrap input:focus, .input-wrap select:focus { outline: none; border-color: var(--primary); }
+.unit-label { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-light); font-size: 0.85rem; pointer-events: none; }
+.btn-calc { display: block; width: 100%; padding: 14px; margin-top: 24px; background: var(--primary); color: white; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+.btn-calc:hover { background: var(--primary-dark); }
+.results { display: none; margin-top: 28px; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.result-box { background: #f0f9ff; border-radius: 12px; padding: 20px; text-align: center; }
+.result-box.highlight { background: #ecfdf5; border: 2px solid var(--success); }
+.result-box .label { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.result-box .value { font-size: 1.8rem; font-weight: 700; color: var(--text); margin-top: 4px; }
+.result-box .sub { font-size: 0.85rem; color: var(--text-light); margin-top: 2px; }
+.info-section { padding: 48px 0; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+.info-card { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+.info-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--primary); }
+.info-card p, .info-card li { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+.info-card ul { padding-left: 20px; }
+.info-card li { margin-bottom: 6px; }
+.faq-section { padding: 48px 0; background: white; }
+.faq-section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 32px; }
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q { padding: 18px 0; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.faq-q::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+.faq-q.open::after { content: '−'; }
+.faq-a { padding: 0 0 18px; color: var(--text-light); font-size: 0.9rem; display: none; line-height: 1.7; }
+.faq-a.open { display: block; }
+footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 32px 0; text-align: center; font-size: 0.85rem; }
+footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+@media (max-width: 768px) { .hero h1 { font-size: 1.6rem; } .calc-card { padding: 20px; } nav { display: none; } }
+.share-actions { display: flex; gap: 10px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+.share-actions button { padding: 10px 18px; border: 2px solid var(--border); border-radius: 8px; background: white; font-family: inherit; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+.share-actions button:hover { border-color: var(--primary); background: #f0f9ff; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Bedroom Flooring Calculator",
+  "url": "https://howmuchflooring.com/bedroom-flooring.html",
+  "description": "Free bedroom flooring calculator with cost estimates for carpet, hardwood, vinyl plank, laminate, and engineered hardwood.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is carpet or hardwood better for bedrooms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carpet is warmer, softer, and quieter — ideal for comfort. Hardwood is easier to clean, more durable, and better for resale value and allergy sufferers. Many homeowners choose hardwood with a plush area rug for the best of both worlds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best flooring for a kids' bedroom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carpet is the classic choice (soft for play, quiet, warm). However, vinyl plank is gaining popularity — it's waterproof, scratch-resistant, and easy to clean. For older kids, laminate is a budget-friendly option."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to floor a bedroom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard bedroom (150 sq ft): Carpet $200-$750 (with padding/install), Laminate $350-$800, Vinyl plank $400-$900, Hardwood $800-$2,000. Carpet is the most budget-friendly option."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does bedroom flooring affect home resale value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Hardwood floors can increase home value by 2-5%. Carpet is expected in bedrooms by most buyers but doesn't add value. Luxury vinyl is neutral to positive. Updated flooring of any type helps sell faster."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I reduce noise with hard flooring in bedrooms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use premium underlayment (cork or felt, not foam). Add area rugs with thick padding. For upstairs bedrooms, acoustic underlayment rated STC 65+ is recommended. Engineered hardwood is quieter than laminate."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://howmuchflooring.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Bedroom Flooring Guide", "item": "https://howmuchflooring.com/bedroom-flooring.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header><div class="container"><a href="/" class="logo">HowMuch<span>Flooring</span>.com</a><nav><a href="/">Home</a><a href="/tile-calculator.html">Tile</a><a href="/hardwood-calculator.html">Hardwood</a><a href="/vinyl-calculator.html">Vinyl</a><a href="/carpet-calculator.html">Carpet</a><a href="/laminate-calculator.html">Laminate</a></nav></div></header>
+
+<div class="container">
+  <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Bedroom Flooring Guide</div>
+</div>
+
+<section class="hero">
+  <h1>Best <span>Bedroom Flooring</span> — Calculator &amp; Cost Guide (2025)</h1>
+  <p>Find the perfect bedroom flooring for comfort and style. Calculate how much you need and compare 2025 costs for carpet, hardwood, vinyl &amp; laminate.</p>
+</section>
+
+<div class="ad-slot">Ad Slot — Leaderboard (728×90)</div>
+
+<section class="calc-section">
+  <div class="calc-card">
+    <h2>🛏️ Bedroom Flooring Calculator</h2>
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="length">Room Length</label>
+        <div class="hint">Measure the longest wall</div>
+        <div class="input-wrap">
+          <input type="number" id="length" placeholder="e.g. 14" step="0.1" min="0">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="width">Room Width</label>
+        <div class="hint">Measure the perpendicular wall</div>
+        <div class="input-wrap">
+          <input type="number" id="width" placeholder="e.g. 12" step="0.1" min="0">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="unit">Unit</label>
+        <div class="input-wrap">
+          <select id="unit">
+            <option value="ft">Feet (ft)</option>
+            <option value="m">Meters (m)</option>
+            <option value="in">Inches (in)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="flooring-type">Flooring Type</label>
+        <div class="input-wrap">
+          <select id="flooring-type">
+            <option value="carpet">Carpet</option>
+            <option value="hardwood">Hardwood</option>
+            <option value="vinyl">Vinyl Plank</option>
+            <option value="laminate">Laminate</option>
+            <option value="engineered">Engineered Hardwood</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="waste">Waste Factor</label>
+        <div class="hint">10% is standard; 15% for patterned carpet</div>
+        <div class="input-wrap">
+          <input type="number" id="waste" value="10" min="0" max="50" step="1">
+          <span class="unit-label">%</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="price">Price per Sq Ft</label>
+        <div class="hint">Material cost only</div>
+        <div class="input-wrap">
+          <input type="number" id="price" placeholder="e.g. 2.50" step="0.01" min="0">
+          <span class="unit-label">$/sqft</span>
+        </div>
+      </div>
+    </div>
+    <button class="btn-calc" onclick="calculate()">Calculate Bedroom Flooring</button>
+
+    <div class="results" id="results">
+      <div class="results-grid">
+        <div class="result-box">
+          <div class="label">Room Area</div>
+          <div class="value" id="r-area">—</div>
+          <div class="sub">sq ft</div>
+        </div>
+        <div class="result-box highlight">
+          <div class="label">Flooring Needed</div>
+          <div class="value" id="r-flooring">—</div>
+          <div class="sub" id="r-flooring-sub">sq ft (incl. waste)</div>
+        </div>
+        <div class="result-box">
+          <div class="label">Estimated Cost</div>
+          <div class="value" id="r-cost">—</div>
+          <div class="sub">materials only</div>
+        </div>
+      </div>
+      <div class="share-actions">
+        <button onclick="shareResults()">📋 Copy Results</button>
+        <button onclick="printResults()">🖨️ Print</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ad-slot">Ad Slot — In-Content (728×90)</div>
+
+<section class="info-section">
+  <div class="container">
+    <h2 style="text-align:center;font-size:1.6rem;margin-bottom:32px;">Best Bedroom Flooring Options</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>🥇 Carpet</h3>
+        <p><strong>#1 choice for bedrooms — $1–$4/sq ft</strong></p>
+        <ul>
+          <li>Warmest and softest underfoot — unbeatable comfort</li>
+          <li>Excellent noise reduction for peaceful sleep</li>
+          <li>Wide range of colors, textures, and pile heights</li>
+          <li>Ideal for master bedrooms and kids' rooms</li>
+          <li>Add quality padding for a luxury feel</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>🪵 Hardwood</h3>
+        <p><strong>Timeless elegance — $4–$12/sq ft</strong></p>
+        <ul>
+          <li>Adds significant resale value to your home</li>
+          <li>Use area rugs for added warmth and comfort</li>
+          <li>Best for master bedrooms and upscale spaces</li>
+          <li>Oak and maple are the most popular species</li>
+          <li>Easy to clean — great for allergy sufferers</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>💰 Laminate</h3>
+        <p><strong>Affordable wood look — $1.50–$4/sq ft</strong></p>
+        <ul>
+          <li>Easy maintenance and allergen-friendly surface</li>
+          <li>Good for kids' and guest rooms on a budget</li>
+          <li>Use underlayment for sound absorption</li>
+          <li>Click-lock installation is quick and DIY-friendly</li>
+          <li>Convincing wood-grain aesthetics</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>💎 Luxury Vinyl Plank</h3>
+        <p><strong>Versatile choice — $2–$5/sq ft</strong></p>
+        <ul>
+          <li>Water-resistant — great for kids' rooms and pet owners</li>
+          <li>Comfortable and quiet with proper underlayment</li>
+          <li>Available in realistic wood and stone looks</li>
+          <li>Durable and scratch-resistant surface</li>
+          <li>Easy click-lock DIY installation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info-section" style="background:white;padding-top:0;">
+  <div class="container">
+    <h2 style="text-align:center;font-size:1.6rem;margin-bottom:32px;">Bedroom Flooring Considerations</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>📐 Average Bedroom Sizes</h3>
+        <ul>
+          <li><strong>Small / Guest bedroom:</strong> 100–150 sq ft</li>
+          <li><strong>Standard bedroom:</strong> 130–180 sq ft</li>
+          <li><strong>Master bedroom:</strong> 200–350 sq ft</li>
+          <li><strong>Kids' bedroom:</strong> 100–150 sq ft</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>🔇 Noise &amp; Comfort</h3>
+        <ul>
+          <li><strong>Noise:</strong> Carpet is the quietest option</li>
+          <li>Add underlayment to hard floors for 2nd-story bedrooms</li>
+          <li><strong>Comfort ranking:</strong> Carpet &gt; Vinyl &gt; Laminate &gt; Hardwood</li>
+          <li>Area rugs on hard floors provide warmth without sacrificing easy cleaning</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>🤧 Allergies &amp; Resale Value</h3>
+        <ul>
+          <li><strong>Allergies:</strong> Hard floors (hardwood, laminate, vinyl) are better for allergy sufferers</li>
+          <li>Carpet traps dust, pollen, and pet dander</li>
+          <li><strong>Resale value:</strong> Hardwood &gt; Carpet &gt; Vinyl &gt; Laminate</li>
+          <li>Updated flooring of any type helps homes sell faster</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <h2>Bedroom Flooring FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is carpet or hardwood better for bedrooms?</div>
+        <div class="faq-a">Carpet is warmer, softer, and quieter — ideal for comfort. Hardwood is easier to clean, more durable, and better for resale value and allergy sufferers. Many homeowners choose hardwood with a plush area rug for the best of both worlds.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What's the best flooring for a kids' bedroom?</div>
+        <div class="faq-a">Carpet is the classic choice (soft for play, quiet, warm). However, vinyl plank is gaining popularity — it's waterproof, scratch-resistant, and easy to clean. For older kids, laminate is a budget-friendly option.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How much does it cost to floor a bedroom?</div>
+        <div class="faq-a">Standard bedroom (150 sq ft): Carpet $200–$750 (with padding/install), Laminate $350–$800, Vinyl plank $400–$900, Hardwood $800–$2,000. Carpet is the most budget-friendly option.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Does bedroom flooring affect home resale value?</div>
+        <div class="faq-a">Yes. Hardwood floors can increase home value by 2–5%. Carpet is expected in bedrooms by most buyers but doesn't add value. Luxury vinyl is neutral to positive. Updated flooring of any type helps sell faster.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How do I reduce noise with hard flooring in bedrooms?</div>
+        <div class="faq-a">Use premium underlayment (cork or felt, not foam). Add area rugs with thick padding. For upstairs bedrooms, acoustic underlayment rated STC 65+ is recommended. Engineered hardwood is quieter than laminate.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ad-slot">Ad Slot — Bottom (728×90)</div>
+
+<footer><div class="container">
+<p style="margin-bottom:12px"><strong>Calculators:</strong> <a href="/tile-calculator.html">Tile</a> · <a href="/hardwood-calculator.html">Hardwood</a> · <a href="/vinyl-calculator.html">Vinyl</a> · <a href="/carpet-calculator.html">Carpet</a> · <a href="/laminate-calculator.html">Laminate</a></p>
+<p style="margin-bottom:12px"><strong>Guides:</strong> <a href="/bathroom-flooring.html">Bathroom</a> · <a href="/kitchen-flooring.html">Kitchen</a> · <a href="/bedroom-flooring.html">Bedroom</a> · <a href="/how-much-flooring-for-12x12-room.html">12×12 Room</a> · <a href="/flooring-cost-per-square-foot.html">Cost Guide</a></p>
+<p>&copy; 2025 HowMuchFlooring.com — Free Flooring Calculator</p>
+<p style="margin-top:8px">Built with ❤️ to help homeowners plan smarter. Estimates are approximate — always verify with your contractor.</p>
+<p style="margin-top:8px">🇧🇷 Reformando no Brasil? Visite <a href="https://quantopreciso.com" target="_blank" style="color:#fbbf24">QuantoPreciso.com</a> — calculadoras gratuitas para obra e reforma.</p>
+</div></footer>
+
+<script>
+const defaultPrices = { carpet: 2.50, hardwood: 8.00, vinyl: 3.50, laminate: 2.75, engineered: 6.00 };
+
+document.getElementById('flooring-type').addEventListener('change', function() {
+  document.getElementById('price').placeholder = 'e.g. ' + defaultPrices[this.value].toFixed(2);
+});
+
+function calculate() {
+  const length = parseFloat(document.getElementById('length').value);
+  const width = parseFloat(document.getElementById('width').value);
+  const unit = document.getElementById('unit').value;
+  const waste = parseFloat(document.getElementById('waste').value) || 10;
+  const type = document.getElementById('flooring-type').value;
+  const priceInput = parseFloat(document.getElementById('price').value);
+  const price = isNaN(priceInput) || priceInput <= 0 ? defaultPrices[type] : priceInput;
+
+  if (isNaN(length) || isNaN(width) || length <= 0 || width <= 0) {
+    alert('Please enter valid room dimensions.');
+    return;
+  }
+
+  let areaFt;
+  if (unit === 'ft') areaFt = length * width;
+  else if (unit === 'm') areaFt = length * width * 10.7639;
+  else areaFt = (length * width) / 144;
+
+  const flooringNeeded = areaFt * (1 + waste / 100);
+  const cost = flooringNeeded * price;
+
+  document.getElementById('r-area').textContent = areaFt.toFixed(1);
+  document.getElementById('r-flooring').textContent = flooringNeeded.toFixed(1);
+  document.getElementById('r-flooring-sub').textContent = 'sq ft (incl. ' + waste + '% waste)';
+  document.getElementById('r-cost').textContent = '$' + cost.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function toggleFaq(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+
+function shareResults() {
+  const area = document.getElementById('r-area').textContent;
+  const flooring = document.getElementById('r-flooring').textContent;
+  const cost = document.getElementById('r-cost').textContent;
+  const type = document.getElementById('flooring-type');
+  const typeName = type.options[type.selectedIndex].text;
+  const text = 'Bedroom Flooring Estimate\n' +
+    'Type: ' + typeName + '\n' +
+    'Room Area: ' + area + ' sq ft\n' +
+    'Flooring Needed: ' + flooring + ' sq ft\n' +
+    'Est. Cost: ' + cost + '\n' +
+    'Via HowMuchFlooring.com';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function() { alert('Results copied to clipboard!'); });
+  } else {
+    prompt('Copy these results:', text);
+  }
+}
+
+function printResults() {
+  window.print();
+}
+</script>
+</body>
+</html>

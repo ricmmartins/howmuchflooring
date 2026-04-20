@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Flooring for Bathrooms — Calculator & Cost Guide (2025)</title>
+<meta name="description" content="Discover the best flooring options for bathrooms in 2025. Includes a free bathroom flooring calculator, waterproof material comparisons, costs, and expert tips.">
+<link rel="canonical" href="https://howmuchflooring.com/bathroom-flooring.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+    --primary: #2563eb; --primary-dark: #1d4ed8; --bg: #f8fafc; --card: #ffffff;
+    --text: #1e293b; --text-light: #64748b; --border: #e2e8f0; --success: #16a34a; --accent: #f59e0b;
+}
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+header { background: var(--primary); color: white; padding: 16px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.3rem; font-weight: 700; text-decoration: none; color: white; }
+.logo span { color: #fbbf24; }
+nav a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 24px; font-size: 0.9rem; font-weight: 500; }
+nav a:hover { color: white; }
+.breadcrumb { padding: 12px 0; font-size: 0.85rem; color: var(--text-light); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.hero { text-align: center; padding: 48px 20px 32px; }
+.hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+.hero h1 span { color: var(--primary); }
+.hero p { color: var(--text-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.ad-slot { background: #f1f5f9; border: 2px dashed var(--border); border-radius: 8px; padding: 20px; text-align: center; color: var(--text-light); font-size: 0.85rem; margin: 24px auto; max-width: 728px; }
+.calc-section { padding: 32px 0; }
+.calc-card { background: var(--card); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 32px; max-width: 800px; margin: 0 auto; }
+.calc-card h2 { font-size: 1.5rem; margin-bottom: 24px; text-align: center; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.form-group .hint { font-size: 0.75rem; color: var(--text-light); margin-bottom: 4px; }
+.input-wrap { position: relative; }
+.input-wrap input, .input-wrap select { width: 100%; padding: 12px 14px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.2s; background: white; }
+.input-wrap input:focus, .input-wrap select:focus { outline: none; border-color: var(--primary); }
+.unit-label { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-light); font-size: 0.85rem; pointer-events: none; }
+.btn-calc { display: block; width: 100%; padding: 14px; margin-top: 24px; background: var(--primary); color: white; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+.btn-calc:hover { background: var(--primary-dark); }
+.results { display: none; margin-top: 28px; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.result-box { background: #f0f9ff; border-radius: 12px; padding: 20px; text-align: center; }
+.result-box.highlight { background: #ecfdf5; border: 2px solid var(--success); }
+.result-box .label { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.result-box .value { font-size: 1.8rem; font-weight: 700; color: var(--text); margin-top: 4px; }
+.result-box .sub { font-size: 0.85rem; color: var(--text-light); margin-top: 2px; }
+.info-section { padding: 48px 0; }
+.info-section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 32px; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+.info-card { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+.info-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--primary); }
+.info-card p, .info-card li { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+.info-card ul { padding-left: 20px; }
+.info-card li { margin-bottom: 6px; }
+.faq-section { padding: 48px 0; background: white; }
+.faq-section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 32px; }
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q { padding: 18px 0; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.faq-q::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+.faq-q.open::after { content: '−'; }
+.faq-a { padding: 0 0 18px; color: var(--text-light); font-size: 0.9rem; display: none; line-height: 1.7; }
+.faq-a.open { display: block; }
+footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 32px 0; text-align: center; font-size: 0.85rem; }
+footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+@media (max-width: 768px) { .hero h1 { font-size: 1.6rem; } .calc-card { padding: 20px; } nav { display: none; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Bathroom Flooring Calculator",
+      "url": "https://howmuchflooring.com/bathroom-flooring.html",
+      "description": "Free bathroom flooring calculator with waterproof material comparisons, costs, and expert tips for 2025.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "browserRequirements": "Requires JavaScript"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the most waterproof bathroom flooring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porcelain tile and luxury vinyl plank (LVP/SPC) are the most waterproof options. Porcelain tile has <0.5% water absorption. SPC vinyl has a stone core that's 100% waterproof. Both are excellent for bathrooms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use hardwood flooring in a bathroom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not recommended for full bathrooms. Solid hardwood warps with moisture exposure. Engineered hardwood with waterproof finish may work in half baths with careful maintenance. Vinyl plank that looks like wood is a safer alternative."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to floor a bathroom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Average bathroom (50 sq ft): Ceramic tile $200-$400 material, Vinyl plank $150-$300, Porcelain $200-$500. Installation adds $200-$600. Total: $400-$1,100 for an average bathroom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is heated flooring worth it in bathrooms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, especially in cold climates. Electric mat systems cost $5-$12/sqft and add $0.10-$0.25/day to operate. They pair best with tile flooring and add resale value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What flooring is best for a small bathroom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Large-format porcelain tile (12×24 or larger) with minimal grout lines makes small bathrooms appear larger. Light colors open up the space. Vinyl plank in a light wood tone is another excellent option."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://howmuchflooring.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Bathroom Flooring Guide", "item": "https://howmuchflooring.com/bathroom-flooring.html" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/" class="logo">HowMuch<span>Flooring</span>.com</a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tile-calculator.html">Tile</a>
+            <a href="/hardwood-calculator.html">Hardwood</a>
+            <a href="/vinyl-calculator.html">Vinyl</a>
+            <a href="/carpet-calculator.html">Carpet</a>
+            <a href="/laminate-calculator.html">Laminate</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; Bathroom Flooring Guide
+    </div>
+</div>
+
+<section class="hero">
+    <h1>Best Flooring for <span>Bathrooms</span></h1>
+    <p>Bathrooms demand waterproof, durable flooring. Compare top options, estimate costs, and find the perfect fit for your bathroom with our free calculator.</p>
+</section>
+
+<div class="ad-slot">Advertisement</div>
+
+<section class="calc-section">
+    <div class="calc-card">
+        <h2>🚿 Bathroom Flooring Calculator</h2>
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="length">Room Length</label>
+                <div class="input-wrap">
+                    <input type="number" id="length" placeholder="8" step="any" min="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="width">Room Width</label>
+                <div class="input-wrap">
+                    <input type="number" id="width" placeholder="6" step="any" min="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="unit">Unit</label>
+                <div class="input-wrap">
+                    <select id="unit">
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="inches">Inches</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="flooring-type">Flooring Type</label>
+                <div class="input-wrap">
+                    <select id="flooring-type">
+                        <option value="porcelain" data-price="5.50">Porcelain Tile</option>
+                        <option value="ceramic" data-price="3.25">Ceramic Tile</option>
+                        <option value="vinyl" data-price="3.50">Vinyl Plank</option>
+                        <option value="sheet" data-price="2.00">Sheet Vinyl</option>
+                        <option value="stone" data-price="10.00">Natural Stone</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="waste">Waste Factor</label>
+                <div class="input-wrap">
+                    <select id="waste">
+                        <option value="5">5%</option>
+                        <option value="10" selected>10%</option>
+                        <option value="15">15%</option>
+                        <option value="20">20%</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="price">Price per sq ft <span class="hint">(optional override)</span></label>
+                <div class="input-wrap">
+                    <input type="number" id="price" placeholder="auto" step="0.01" min="0">
+                    <span class="unit-label">$/sqft</span>
+                </div>
+            </div>
+        </div>
+        <button class="btn-calc" onclick="calculate()">Calculate Bathroom Flooring</button>
+        <div class="results" id="results">
+            <div class="results-grid">
+                <div class="result-box">
+                    <div class="label">Room Area</div>
+                    <div class="value" id="r-area">—</div>
+                    <div class="sub">sq ft</div>
+                </div>
+                <div class="result-box highlight">
+                    <div class="label">Flooring Needed</div>
+                    <div class="value" id="r-needed">—</div>
+                    <div class="sub" id="r-needed-sub">sq ft (incl. waste)</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Estimated Cost</div>
+                    <div class="value" id="r-cost">—</div>
+                    <div class="sub" id="r-cost-sub">material only</div>
+                </div>
+            </div>
+            <div id="share-bar" style="display:none;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap">
+                <button onclick="shareResults()" class="share-btn" style="padding:10px 20px;border-radius:99px;border:2px solid #2563eb;background:white;color:#2563eb;font-weight:600;cursor:pointer;font-size:0.9rem">📋 Copy Results</button>
+                <button onclick="window.print()" style="padding:10px 20px;border-radius:99px;border:2px solid #64748b;background:white;color:#64748b;font-weight:600;cursor:pointer;font-size:0.9rem">🖨️ Print</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="ad-slot">Advertisement</div>
+
+<section class="info-section">
+    <div class="container">
+        <h2>Best Bathroom Flooring Options</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>🏺 Porcelain Tile</h3>
+                <p>The most popular bathroom flooring choice. Water absorption &lt;0.5%. Extremely durable and available in countless styles.</p>
+                <ul>
+                    <li><strong>Cost:</strong> $3–$8/sqft material</li>
+                    <li><strong>Pros:</strong> Extremely durable, waterproof, high resale value</li>
+                    <li><strong>Cons:</strong> Cold underfoot (pair with heated floor mat), harder DIY install</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>🪵 Luxury Vinyl Plank (LVP)</h3>
+                <p>100% waterproof and increasingly popular for bathrooms. Warm underfoot and easy to install as a DIY project.</p>
+                <ul>
+                    <li><strong>Cost:</strong> $2–$5/sqft material</li>
+                    <li><strong>Pros:</strong> Waterproof, warm, easy DIY, looks like wood/stone</li>
+                    <li><strong>Cons:</strong> Can dent from heavy objects, shorter lifespan than tile</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>🔲 Ceramic Tile</h3>
+                <p>Budget-friendly and waterproof when properly grouted. Available in a wide variety of colors, patterns, and sizes.</p>
+                <ul>
+                    <li><strong>Cost:</strong> $1.50–$5/sqft material</li>
+                    <li><strong>Pros:</strong> Affordable, waterproof, huge style variety</li>
+                    <li><strong>Cons:</strong> Less dense than porcelain, can chip more easily</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>🪨 Natural Stone</h3>
+                <p>Premium look with marble, slate, or travertine. Requires regular sealing to maintain water resistance.</p>
+                <ul>
+                    <li><strong>Cost:</strong> $5–$15/sqft material</li>
+                    <li><strong>Pros:</strong> Stunning aesthetics, unique patterns, adds home value</li>
+                    <li><strong>Cons:</strong> Slippery when wet (choose honed finish), requires sealing, expensive</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="info-section" style="background:white;">
+    <div class="container">
+        <h2>Bathroom Flooring Considerations</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>💧 Moisture Protection</h3>
+                <p>Proper moisture management is critical in bathrooms. Always use a waterproof membrane beneath tile floors, especially in shower areas.</p>
+                <ul>
+                    <li><strong>Substrate:</strong> Cement board (not drywall) for wet areas</li>
+                    <li><strong>Membrane:</strong> Liquid or sheet waterproof barrier under tile</li>
+                    <li><strong>Grout:</strong> Epoxy grout resists water better than cement grout</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>📏 Average Bathroom Sizes</h3>
+                <ul>
+                    <li><strong>Half bath:</strong> 18–30 sq ft</li>
+                    <li><strong>Full bath:</strong> 40–60 sq ft</li>
+                    <li><strong>Master bath:</strong> 60–100 sq ft</li>
+                </ul>
+                <p style="margin-top:8px">Use our calculator above to get an exact estimate for your bathroom dimensions.</p>
+            </div>
+            <div class="info-card">
+                <h3>🔥 Heated Floors</h3>
+                <p>Radiant heating turns cold bathroom floors into a luxury feature. Best paired with tile flooring.</p>
+                <ul>
+                    <li><strong>Electric mat:</strong> $5–$12/sqft installed</li>
+                    <li><strong>Radiant hydronic:</strong> $6–$16/sqft installed</li>
+                    <li><strong>Operating cost:</strong> $0.10–$0.25/day</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>🪄 Small Bathroom Tips</h3>
+                <ul>
+                    <li>Large-format tile (12×24 or bigger) makes rooms look bigger</li>
+                    <li>Minimal grout lines create a seamless appearance</li>
+                    <li>Light colors open up the space visually</li>
+                    <li>Diagonal tile layout adds perceived width</li>
+                    <li>Continuous flooring from bath into hallway extends sightlines</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="container">
+        <h2>Bathroom Flooring FAQ</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">What is the most waterproof bathroom flooring?</div>
+                <div class="faq-a">Porcelain tile and luxury vinyl plank (LVP/SPC) are the most waterproof options. Porcelain tile has &lt;0.5% water absorption. SPC vinyl has a stone core that's 100% waterproof. Both are excellent for bathrooms.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Can I use hardwood flooring in a bathroom?</div>
+                <div class="faq-a">Not recommended for full bathrooms. Solid hardwood warps with moisture exposure. Engineered hardwood with waterproof finish may work in half baths with careful maintenance. Vinyl plank that looks like wood is a safer alternative.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">How much does it cost to floor a bathroom?</div>
+                <div class="faq-a">Average bathroom (50 sq ft): Ceramic tile $200–$400 material, Vinyl plank $150–$300, Porcelain $200–$500. Installation adds $200–$600. Total: $400–$1,100 for an average bathroom.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Is heated flooring worth it in bathrooms?</div>
+                <div class="faq-a">Yes, especially in cold climates. Electric mat systems cost $5–$12/sqft and add $0.10–$0.25/day to operate. They pair best with tile flooring and add resale value.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">What flooring is best for a small bathroom?</div>
+                <div class="faq-a">Large-format porcelain tile (12×24 or larger) with minimal grout lines makes small bathrooms appear larger. Light colors open up the space. Vinyl plank in a light wood tone is another excellent option.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="ad-slot">Advertisement</div>
+
+<footer>
+    <div class="container">
+        <p style="margin-bottom:12px"><strong>Calculators:</strong>
+            <a href="/tile-calculator.html">Tile</a> · <a href="/hardwood-calculator.html">Hardwood</a> · <a href="/vinyl-calculator.html">Vinyl</a> · <a href="/carpet-calculator.html">Carpet</a> · <a href="/laminate-calculator.html">Laminate</a>
+        </p>
+        <p style="margin-bottom:12px"><strong>Guides:</strong>
+            <a href="/bathroom-flooring.html">Bathroom</a> · <a href="/kitchen-flooring.html">Kitchen</a> · <a href="/bedroom-flooring.html">Bedroom</a> · <a href="/how-much-flooring-for-12x12-room.html">12×12 Room</a> · <a href="/flooring-cost-per-square-foot.html">Cost Guide</a>
+        </p>
+        <p>&copy; 2025 HowMuchFlooring.com — Free Flooring Calculator</p>
+        <p style="margin-top:8px">Built with ❤️ to help homeowners plan smarter. Estimates are approximate — always verify with your contractor.</p>
+        <p style="margin-top:8px">🇧🇷 Reformando no Brasil? Visite <a href="https://quantopreciso.com" target="_blank" style="color:#fbbf24">QuantoPreciso.com</a> — calculadoras gratuitas para obra e reforma.</p>
+    </div>
+</footer>
+
+<script>
+var lastResults = {};
+
+function calculate() {
+    var l = parseFloat(document.getElementById('length').value);
+    var w = parseFloat(document.getElementById('width').value);
+    if (!l || !w || l <= 0 || w <= 0) { alert('Please enter valid room dimensions.'); return; }
+
+    var unit = document.getElementById('unit').value;
+    var lengthFt = l, widthFt = w;
+    if (unit === 'meters') { lengthFt = l * 3.28084; widthFt = w * 3.28084; }
+    else if (unit === 'inches') { lengthFt = l / 12; widthFt = w / 12; }
+
+    var area = lengthFt * widthFt;
+    var wastePct = parseInt(document.getElementById('waste').value) / 100;
+    var needed = area * (1 + wastePct);
+
+    var sel = document.getElementById('flooring-type');
+    var typeName = sel.options[sel.selectedIndex].text;
+    var defaultPrice = parseFloat(sel.options[sel.selectedIndex].getAttribute('data-price'));
+    var customPrice = parseFloat(document.getElementById('price').value);
+    var price = (customPrice && customPrice > 0) ? customPrice : defaultPrice;
+    var cost = needed * price;
+
+    document.getElementById('r-area').textContent = area.toFixed(1);
+    document.getElementById('r-needed').textContent = needed.toFixed(1);
+    document.getElementById('r-needed-sub').textContent = 'sq ft (incl. ' + document.getElementById('waste').value + '% waste)';
+    document.getElementById('r-cost').textContent = '$' + cost.toFixed(2);
+    document.getElementById('r-cost-sub').textContent = typeName + ' material only';
+
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('share-bar').style.display = 'flex';
+
+    lastResults = {
+        area: area.toFixed(1),
+        needed: needed.toFixed(1),
+        cost: '$' + cost.toFixed(2),
+        type: typeName,
+        waste: document.getElementById('waste').value
+    };
+}
+
+function shareResults() {
+    var text = 'Bathroom Flooring Estimate\n';
+    text += '━━━━━━━━━━━━━━━━━━\n';
+    text += 'Room Area: ' + lastResults.area + ' sq ft\n';
+    text += 'Flooring Needed: ' + lastResults.needed + ' sq ft (incl. ' + lastResults.waste + '% waste)\n';
+    text += 'Material: ' + lastResults.type + '\n';
+    text += 'Est. Cost: ' + lastResults.cost + '\n';
+    text += '━━━━━━━━━━━━━━━━━━\n';
+    text += 'via HowMuchFlooring.com/bathroom-flooring.html';
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() {
+            var btn = document.querySelector('.share-btn');
+            btn.textContent = '✅ Copied!';
+            setTimeout(function() { btn.textContent = '📋 Copy Results'; }, 2000);
+        });
+    }
+}
+
+function toggleFaq(el) {
+    el.classList.toggle('open');
+    var a = el.nextElementSibling;
+    a.classList.toggle('open');
+}
+</script>
+</body>
+</html>

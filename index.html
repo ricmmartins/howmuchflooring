@@ -132,6 +132,20 @@
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "How do I calculate flooring for an L-shaped room?", "acceptedAnswer": {"@type": "Answer", "text": "Split the L-shape into two rectangles. Measure each rectangle separately (length × width), then add both areas together. Add 15-20% waste for the extra cuts needed."}},
+            {"@type": "Question", "name": "What is the waste factor and why do I need it?", "acceptedAnswer": {"@type": "Answer", "text": "Waste factor accounts for material lost during cutting, breakage, and fitting around obstacles. A 10% waste factor is standard for most rooms."}},
+            {"@type": "Question", "name": "How many boxes of flooring do I need?", "acceptedAnswer": {"@type": "Answer", "text": "Check the coverage per box on the product packaging (usually 15-25 sq ft per box for tile, 20-30 sq ft for laminate/vinyl). Divide your total needed square footage by the coverage per box, then round up."}},
+            {"@type": "Question", "name": "Does this calculator include installation cost?", "acceptedAnswer": {"@type": "Answer", "text": "The cost estimate shows material cost only. Installation typically adds $3-$10 per square foot depending on the flooring type and your location."}},
+            {"@type": "Question", "name": "How do I convert square feet to square meters?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply square feet by 0.0929 to get square meters. For example, 120 sq ft × 0.0929 = 11.15 sq m."}},
+            {"@type": "Question", "name": "What is the cheapest flooring option?", "acceptedAnswer": {"@type": "Answer", "text": "Sheet vinyl and carpet are typically the most affordable at $1-$3 per square foot for materials. Laminate offers a good middle ground at $1.50-$5 per square foot."}}
+        ]
+    }
+    </script>
 </head>
 <body>
 
@@ -249,6 +263,10 @@
                 </div>
             </div>
         </div>
+        <div id="share-bar" style="display:none;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap">
+            <button onclick="shareResults()" class="share-btn" style="padding:10px 20px;border-radius:99px;border:2px solid #2563eb;background:white;color:#2563eb;font-weight:600;cursor:pointer;font-size:0.9rem">📋 Copy Results</button>
+            <button onclick="printResults()" style="padding:10px 20px;border-radius:99px;border:2px solid #64748b;background:white;color:#64748b;font-weight:600;cursor:pointer;font-size:0.9rem">🖨️ Print</button>
+        </div>
     </div>
 </section>
 
@@ -335,8 +353,23 @@
 
 <footer>
     <div class="container">
+        <p style="margin-bottom:12px"><strong>Calculators:</strong>
+            <a href="/tile-calculator.html">Tile</a> ·
+            <a href="/hardwood-calculator.html">Hardwood</a> ·
+            <a href="/vinyl-calculator.html">Vinyl</a> ·
+            <a href="/carpet-calculator.html">Carpet</a> ·
+            <a href="/laminate-calculator.html">Laminate</a>
+        </p>
+        <p style="margin-bottom:12px"><strong>Guides:</strong>
+            <a href="/bathroom-flooring.html">Bathroom</a> ·
+            <a href="/kitchen-flooring.html">Kitchen</a> ·
+            <a href="/bedroom-flooring.html">Bedroom</a> ·
+            <a href="/how-much-flooring-for-12x12-room.html">12×12 Room</a> ·
+            <a href="/flooring-cost-per-square-foot.html">Cost Guide</a>
+        </p>
         <p>&copy; 2025 HowMuchFlooring.com — Free Flooring Calculator</p>
         <p style="margin-top:8px">Built with ❤️ to help homeowners plan smarter. Estimates are approximate — always verify with your contractor.</p>
+        <p style="margin-top:8px">🇧🇷 Reformando no Brasil? Visite <a href="https://quantopreciso.com" target="_blank" style="color:#fbbf24">QuantoPreciso.com</a> — calculadoras gratuitas para obra e reforma.</p>
     </div>
 </footer>
 
@@ -421,6 +454,28 @@ function calculate() {
 
     document.getElementById('results').style.display = 'block';
     document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    // Show share buttons
+    document.getElementById('share-bar').style.display = 'flex';
+}
+
+function shareResults() {
+    const area = document.getElementById('r-area').textContent;
+    const needed = document.getElementById('r-needed').textContent;
+    const text = `I need ${needed} sq ft of ${currentType} flooring for my ${area} sq ft room! Calculated at HowMuchFlooring.com`;
+    if (navigator.share) {
+        navigator.share({ title: 'Flooring Calculator Results', text: text, url: 'https://howmuchflooring.com' });
+    } else {
+        navigator.clipboard.writeText(text + '\nhttps://howmuchflooring.com').then(() => {
+            const btn = document.querySelector('.share-btn');
+            btn.textContent = '✓ Copied!';
+            setTimeout(() => btn.textContent = '📋 Copy Results', 2000);
+        });
+    }
+}
+
+function printResults() {
+    window.print();
 }
 
 function toggleFaq(el) {

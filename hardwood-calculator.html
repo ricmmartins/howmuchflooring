@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardwood Flooring Calculator — How Much Hardwood Do I Need?</title>
+    <meta name="description" content="Free hardwood flooring calculator. Estimate how many square feet of hardwood you need, number of boards, waste factor, and 2025 hardwood costs by species.">
+    <link rel="canonical" href="https://howmuchflooring.com/hardwood-calculator.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Hardwood Flooring Calculator",
+        "url": "https://howmuchflooring.com/hardwood-calculator.html",
+        "description": "Free hardwood flooring calculator. Estimate how many square feet of hardwood you need, number of boards, waste factor, and 2025 hardwood costs by species.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much hardwood do I need for a 10×12 room?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "120 sq ft + 10% waste = 132 sq ft of hardwood. At average $7/sq ft for materials, budget approximately $924. Add installation costs of $4-$12/sq ft."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between solid and engineered hardwood?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Solid is milled from a single piece of wood (3/4\" thick) and can be sanded/refinished many times. Engineered has a real wood veneer over plywood layers, offering better moisture resistance and suitability for below-grade installation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long should hardwood acclimate before installation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most manufacturers recommend 3-5 days of acclimation. Store the unopened boxes in the room where they'll be installed, maintaining normal temperature (60-80°F) and humidity (35-55%)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which direction should I lay hardwood floors?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Generally perpendicular to floor joists for structural support. In hallways, run boards lengthwise. In most rooms, lay planks parallel to the longest wall for the best visual effect."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I install hardwood in a kitchen or bathroom?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kitchens: yes, with proper sealing and immediate cleanup of spills. Bathrooms: not recommended for solid hardwood; engineered hardwood with waterproof finish can work in half baths. Consider waterproof vinyl plank as an alternative."
+                }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://howmuchflooring.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Hardwood Calculator",
+                "item": "https://howmuchflooring.com/hardwood-calculator.html"
+            }
+        ]
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --success: #16a34a;
+            --accent: #f59e0b;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        header { background: var(--primary); color: white; padding: 16px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; text-decoration: none; color: white; }
+        .logo span { color: #fbbf24; }
+        nav a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 24px; font-size: 0.9rem; font-weight: 500; }
+        nav a:hover { color: white; }
+
+        .breadcrumb { padding: 12px 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        .ad-slot { background: #f1f5f9; border: 2px dashed var(--border); border-radius: 8px; padding: 20px; text-align: center; color: var(--text-light); font-size: 0.85rem; margin: 24px auto; max-width: 728px; }
+
+        .calc-section { padding: 32px 0; }
+        .calc-card { background: var(--card); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 32px; max-width: 800px; margin: 0 auto; }
+        .calc-card h2 { font-size: 1.5rem; margin-bottom: 24px; text-align: center; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+        .form-group .hint { font-size: 0.75rem; color: var(--text-light); margin-bottom: 4px; }
+        .input-wrap { position: relative; }
+        .input-wrap input, .input-wrap select {
+            width: 100%; padding: 12px 14px; border: 2px solid var(--border); border-radius: 10px;
+            font-size: 1rem; font-family: inherit; transition: border-color 0.2s; background: white;
+        }
+        .input-wrap input:focus, .input-wrap select:focus { outline: none; border-color: var(--primary); }
+        .unit-label { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-light); font-size: 0.85rem; pointer-events: none; }
+        .btn-calc {
+            display: block; width: 100%; padding: 14px; margin-top: 24px;
+            background: var(--primary); color: white; border: none; border-radius: 12px;
+            font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s;
+        }
+        .btn-calc:hover { background: var(--primary-dark); }
+
+        .results { display: none; margin-top: 28px; animation: fadeIn 0.4s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+        .result-box { background: #f0f9ff; border-radius: 12px; padding: 20px; text-align: center; }
+        .result-box.highlight { background: #ecfdf5; border: 2px solid var(--success); }
+        .result-box .label { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+        .result-box .value { font-size: 1.8rem; font-weight: 700; color: var(--text); margin-top: 4px; }
+        .result-box .sub { font-size: 0.85rem; color: var(--text-light); margin-top: 2px; }
+
+        .info-section { padding: 48px 0; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+        .info-card { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .info-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--primary); }
+        .info-card p, .info-card li { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+        .info-card ul { padding-left: 20px; }
+        .info-card li { margin-bottom: 6px; }
+
+        .faq-section { padding: 48px 0; background: white; }
+        .faq-section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 32px; }
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--border); }
+        .faq-q { padding: 18px 0; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-q.open::after { content: '\2212'; }
+        .faq-a { padding: 0 0 18px; color: var(--text-light); font-size: 0.9rem; display: none; line-height: 1.7; }
+        .faq-a.open { display: block; }
+
+        footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 32px 0; text-align: center; font-size: 0.85rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+
+        .custom-plank-input { display: none; margin-top: 12px; }
+        .custom-plank-input.show { display: block; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.6rem; }
+            .calc-card { padding: 20px; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="/" class="logo">HowMuch<span>Flooring</span>.com</a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tile-calculator.html">Tile</a>
+            <a href="/hardwood-calculator.html">Hardwood</a>
+            <a href="/vinyl-calculator.html">Vinyl</a>
+            <a href="/carpet-calculator.html">Carpet</a>
+            <a href="/laminate-calculator.html">Laminate</a>
+        </nav>
+    </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+        <a href="/">Home</a> &rsaquo; <span>Hardwood Calculator</span>
+    </div>
+</nav>
+
+<div class="ad-slot">[ Ad Space — 728×90 Leaderboard ]</div>
+
+<section class="calc-section">
+    <div class="calc-card">
+        <h1 style="font-size:1.5rem;margin-bottom:4px;text-align:center">🪵 Hardwood Flooring Calculator</h1>
+        <p style="text-align:center;color:var(--text-light);font-size:0.9rem;margin-bottom:24px">Calculate how much hardwood flooring and how many boards you need</p>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="length">Room Length</label>
+                <div class="input-wrap">
+                    <input type="number" id="length" placeholder="12" min="0" step="any">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="width">Room Width</label>
+                <div class="input-wrap">
+                    <input type="number" id="width" placeholder="10" min="0" step="any">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="unit">Unit</label>
+                <div class="input-wrap">
+                    <select id="unit">
+                        <option value="feet">Feet</option>
+                        <option value="meters">Meters</option>
+                        <option value="inches">Inches</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="plankWidth">Plank Width</label>
+                <div class="input-wrap">
+                    <select id="plankWidth" onchange="toggleCustomPlank()">
+                        <option value="2.25">2.25" — Standard strip</option>
+                        <option value="3.25" selected>3.25" — Common</option>
+                        <option value="5">5" — Wide plank</option>
+                        <option value="7">7" — Extra wide</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-plank-input" id="customPlankInput">
+            <div class="form-group">
+                <label for="customPlankW">Custom Plank Width (inches)</label>
+                <div class="input-wrap">
+                    <input type="number" id="customPlankW" placeholder="4" min="0" step="any">
+                    <span class="unit-label">in</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-grid" style="margin-top:20px">
+            <div class="form-group">
+                <label for="plankLength">Plank Length</label>
+                <div class="input-wrap">
+                    <select id="plankLength">
+                        <option value="12">12" (1 ft)</option>
+                        <option value="24">24" (2 ft)</option>
+                        <option value="36">36" (3 ft)</option>
+                        <option value="48" selected>48" (4 ft)</option>
+                        <option value="36avg">Random lengths (avg 36")</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="waste">Waste Factor</label>
+                <div class="input-wrap">
+                    <select id="waste">
+                        <option value="0.05">5% — Simple rectangle</option>
+                        <option value="0.10" selected>10% — Standard</option>
+                        <option value="0.15">15% — Angled rooms</option>
+                        <option value="0.20">20% — Complex layout</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="price">Price per sq ft (optional)</label>
+                <div class="input-wrap">
+                    <input type="number" id="price" placeholder="7.00" min="0" step="0.01">
+                    <span class="unit-label">$/sqft</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-calc" onclick="calculate()">Calculate Hardwood Needed</button>
+
+        <div class="results" id="results">
+            <div class="results-grid">
+                <div class="result-box">
+                    <div class="label">Room Area</div>
+                    <div class="value" id="resArea">—</div>
+                    <div class="sub">sq ft</div>
+                </div>
+                <div class="result-box highlight">
+                    <div class="label">Flooring Needed</div>
+                    <div class="value" id="resNeeded">—</div>
+                    <div class="sub" id="resNeededSub">sq ft (with waste)</div>
+                </div>
+                <div class="result-box">
+                    <div class="label">Boards Needed</div>
+                    <div class="value" id="resBoards">—</div>
+                    <div class="sub" id="resBoardsSub">boards</div>
+                </div>
+                <div class="result-box" id="resCostBox" style="display:none">
+                    <div class="label">Estimated Cost</div>
+                    <div class="value" id="resCost">—</div>
+                    <div class="sub">materials only</div>
+                </div>
+            </div>
+            <div id="share-bar" style="display:none;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap">
+                <button onclick="shareResults()" class="share-btn" style="padding:10px 20px;border-radius:99px;border:2px solid #2563eb;background:white;color:#2563eb;font-weight:600;cursor:pointer;font-size:0.9rem">📋 Copy Results</button>
+                <button onclick="window.print()" style="padding:10px 20px;border-radius:99px;border:2px solid #64748b;background:white;color:#64748b;font-weight:600;cursor:pointer;font-size:0.9rem">🖨️ Print</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="info-section">
+    <div class="container">
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>💰 Hardwood Costs by Species (2025)</h3>
+                <ul>
+                    <li><strong>Oak:</strong> $4 – $8 / sq ft</li>
+                    <li><strong>Maple:</strong> $5 – $9 / sq ft</li>
+                    <li><strong>Hickory:</strong> $5 – $10 / sq ft</li>
+                    <li><strong>Cherry:</strong> $6 – $11 / sq ft</li>
+                    <li><strong>Walnut:</strong> $8 – $14 / sq ft</li>
+                    <li><strong>Bamboo:</strong> $3 – $7 / sq ft</li>
+                    <li><strong>Installation:</strong> $4 – $12 / sq ft</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>🏗️ Solid vs. Engineered Hardwood</h3>
+                <p><strong>Solid Hardwood:</strong> 3/4" thick, can be refinished multiple times, sensitive to moisture. Best for main-level living areas.</p>
+                <p style="margin-top:8px"><strong>Engineered Hardwood:</strong> Layers of plywood with real wood veneer, more dimensionally stable, better for basements. Can be refinished 1–2 times.</p>
+            </div>
+            <div class="info-card">
+                <h3>🧹 Hardwood Maintenance Tips</h3>
+                <ul>
+                    <li>Sweep or vacuum regularly</li>
+                    <li>Damp mop only — never wet</li>
+                    <li>Use felt pads under furniture</li>
+                    <li>Refinish every 7–10 years</li>
+                    <li>Maintain 35–55% indoor humidity</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>🧭 Installation Direction Guide</h3>
+                <ul>
+                    <li>Run planks perpendicular to floor joists</li>
+                    <li>In hallways, run lengthwise</li>
+                    <li>In small rooms, run toward the longest wall to make the room appear larger</li>
+                    <li>Consider light source — planks running toward windows look best</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="ad-slot">[ Ad Space — 728×90 Leaderboard ]</div>
+
+<section class="faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">How much hardwood do I need for a 10×12 room?</div>
+                <div class="faq-a">120 sq ft + 10% waste = 132 sq ft of hardwood. At average $7/sq ft for materials, budget approximately $924. Add installation costs of $4–$12/sq ft for a total project cost of $1,400–$2,500.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">What's the difference between solid and engineered hardwood?</div>
+                <div class="faq-a">Solid is milled from a single piece of wood (3/4" thick) and can be sanded/refinished many times. Engineered has a real wood veneer over plywood layers, offering better moisture resistance and suitability for below-grade installation.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">How long should hardwood acclimate before installation?</div>
+                <div class="faq-a">Most manufacturers recommend 3–5 days of acclimation. Store the unopened boxes in the room where they'll be installed, maintaining normal temperature (60–80°F) and humidity (35–55%).</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Which direction should I lay hardwood floors?</div>
+                <div class="faq-a">Generally perpendicular to floor joists for structural support. In hallways, run boards lengthwise. In most rooms, lay planks parallel to the longest wall for the best visual effect.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Can I install hardwood in a kitchen or bathroom?</div>
+                <div class="faq-a">Kitchens: yes, with proper sealing and immediate cleanup of spills. Bathrooms: not recommended for solid hardwood; engineered hardwood with waterproof finish can work in half baths. Consider waterproof vinyl plank as an alternative.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="ad-slot">[ Ad Space — 728×90 Leaderboard ]</div>
+
+<footer>
+    <div class="container">
+        <p style="margin-bottom:12px"><strong>Calculators:</strong>
+            <a href="/tile-calculator.html">Tile</a> ·
+            <a href="/hardwood-calculator.html">Hardwood</a> ·
+            <a href="/vinyl-calculator.html">Vinyl</a> ·
+            <a href="/carpet-calculator.html">Carpet</a> ·
+            <a href="/laminate-calculator.html">Laminate</a>
+        </p>
+        <p style="margin-bottom:12px"><strong>Guides:</strong>
+            <a href="/bathroom-flooring.html">Bathroom</a> ·
+            <a href="/kitchen-flooring.html">Kitchen</a> ·
+            <a href="/bedroom-flooring.html">Bedroom</a> ·
+            <a href="/how-much-flooring-for-12x12-room.html">12×12 Room</a> ·
+            <a href="/flooring-cost-per-square-foot.html">Cost Guide</a>
+        </p>
+        <p>&copy; 2025 HowMuchFlooring.com — Free Flooring Calculator</p>
+        <p style="margin-top:8px">Built with ❤️ to help homeowners plan smarter. Estimates are approximate — always verify with your contractor.</p>
+        <p style="margin-top:8px">🇧🇷 Reformando no Brasil? Visite <a href="https://quantopreciso.com" target="_blank" style="color:#fbbf24">QuantoPreciso.com</a> — calculadoras gratuitas para obra e reforma.</p>
+    </div>
+</footer>
+
+<script>
+function toggleCustomPlank() {
+    var sel = document.getElementById('plankWidth').value;
+    var el = document.getElementById('customPlankInput');
+    el.classList.toggle('show', sel === 'custom');
+}
+
+function getPlankWidthInches() {
+    var sel = document.getElementById('plankWidth').value;
+    if (sel === 'custom') {
+        var w = parseFloat(document.getElementById('customPlankW').value);
+        if (!w || w <= 0) return null;
+        return w;
+    }
+    return parseFloat(sel);
+}
+
+function getPlankLengthInches() {
+    var sel = document.getElementById('plankLength').value;
+    if (sel === '36avg') return 36;
+    return parseFloat(sel);
+}
+
+function convertToFeet(val, unit) {
+    if (unit === 'meters') return val * 3.28084;
+    if (unit === 'inches') return val / 12;
+    return val;
+}
+
+function calculate() {
+    var length = parseFloat(document.getElementById('length').value);
+    var width = parseFloat(document.getElementById('width').value);
+    var unit = document.getElementById('unit').value;
+    var waste = parseFloat(document.getElementById('waste').value);
+    var price = parseFloat(document.getElementById('price').value);
+    var plankW = getPlankWidthInches();
+    var plankL = getPlankLengthInches();
+
+    if (!length || length <= 0 || !width || width <= 0) {
+        alert('Please enter valid room dimensions.');
+        return;
+    }
+    if (!plankW) {
+        alert('Please enter a valid custom plank width.');
+        return;
+    }
+
+    var lengthFt = convertToFeet(length, unit);
+    var widthFt = convertToFeet(width, unit);
+    var area = lengthFt * widthFt;
+    var totalWithWaste = area * (1 + waste);
+
+    // Board area in sq ft
+    var boardArea = (plankW / 12) * (plankL / 12);
+    var boardsNeeded = Math.ceil(totalWithWaste / boardArea);
+
+    document.getElementById('resArea').textContent = area.toFixed(1);
+    document.getElementById('resNeeded').textContent = totalWithWaste.toFixed(1);
+    document.getElementById('resNeededSub').textContent = 'sq ft (incl. ' + (waste * 100) + '% waste)';
+    document.getElementById('resBoards').textContent = boardsNeeded.toLocaleString();
+    document.getElementById('resBoardsSub').textContent = 'boards (' + plankW + '"×' + plankL + '")';
+
+    var costBox = document.getElementById('resCostBox');
+    if (price && price > 0) {
+        var cost = totalWithWaste * price;
+        document.getElementById('resCost').textContent = '$' + cost.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        costBox.style.display = '';
+    } else {
+        costBox.style.display = 'none';
+    }
+
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('share-bar').style.display = 'flex';
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function shareResults() {
+    var area = document.getElementById('resArea').textContent;
+    var needed = document.getElementById('resNeeded').textContent;
+    var boards = document.getElementById('resBoards').textContent;
+    var costEl = document.getElementById('resCost');
+    var costBox = document.getElementById('resCostBox');
+
+    var text = '🪵 Hardwood Flooring Estimate\n';
+    text += '━━━━━━━━━━━━━━━━━━━━━━━━━\n';
+    text += 'Room Area: ' + area + ' sq ft\n';
+    text += 'Flooring Needed: ' + needed + ' sq ft\n';
+    text += 'Boards Needed: ' + boards + '\n';
+    if (costBox.style.display !== 'none') {
+        text += 'Estimated Cost: ' + costEl.textContent + '\n';
+    }
+    text += '━━━━━━━━━━━━━━━━━━━━━━━━━\n';
+    text += 'Calculated at HowMuchFlooring.com/hardwood-calculator.html';
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function() {
+            var btn = document.querySelector('.share-btn');
+            btn.textContent = '✅ Copied!';
+            setTimeout(function() { btn.textContent = '📋 Copy Results'; }, 2000);
+        });
+    }
+}
+
+function toggleFaq(el) {
+    el.classList.toggle('open');
+    var answer = el.nextElementSibling;
+    answer.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
