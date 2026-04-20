@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CMBC8WTFD"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6CMBC8WTFD');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseboard Calculator — How Much Baseboard Do I Need?</title>
+    <meta name="description" content="Free baseboard and molding calculator. Calculate linear feet, number of pieces, miter cuts, and corners needed for any room. Includes baseboard styles, heights, and 2025 cost estimates.">
+    <link rel="canonical" href="https://howmuchflooring.com/baseboard-calculator.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Baseboard Calculator",
+        "url": "https://howmuchflooring.com/baseboard-calculator.html",
+        "description": "Free baseboard and molding calculator. Calculate linear feet, pieces, corners, and miter cuts needed for any room.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much baseboard do I need for a 12×12 room?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A 12×12 room has a perimeter of 48 linear feet. Subtract about 3 feet for each standard doorway (typically 1–2 doors). So you need roughly 42–45 linear feet. Since baseboards come in 8-foot lengths, you'd need 6 pieces. Always buy an extra piece for mistakes and miter cuts." }
+            },
+            {
+                "@type": "Question",
+                "name": "What height baseboard should I use?",
+                "acceptedAnswer": { "@type": "Answer", "text": "For standard 8-foot ceilings, 3-inch to 5.25-inch baseboards are most common. Rooms with 9-10 foot ceilings look best with 5.25-inch to 7.25-inch baseboards. Taller baseboards create a more elegant, traditional look. The general rule is: taller ceilings = taller baseboards." }
+            },
+            {
+                "@type": "Question",
+                "name": "What type of baseboard is best for my home?",
+                "acceptedAnswer": { "@type": "Answer", "text": "MDF (medium-density fiberboard) is the most popular choice — it's affordable, paintable, and doesn't warp. Solid pine or poplar is ideal if you want a stained finish. PVC/vinyl baseboards are waterproof and best for bathrooms, kitchens, and basements. Hardwood baseboards are premium but can be stained to match wood floors." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I cut baseboard corners?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Inside corners: Use a coped joint — cut one piece square and cope (back-cut) the profile of the second piece to fit over the first. This accommodates walls that aren't perfectly square. Outside corners: Use 45-degree miter cuts on both pieces. A miter saw makes clean cuts. Test-fit before nailing." }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://howmuchflooring.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Baseboard Calculator", "item": "https://howmuchflooring.com/baseboard-calculator.html" }
+        ]
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --success: #16a34a;
+            --accent: #f59e0b;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        header { background: linear-gradient(135deg, #1e3a5f, #2563eb); color: white; padding: 16px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; text-decoration: none; color: white; }
+        .logo span { color: #f59e0b; }
+        nav a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 24px; font-size: 0.9rem; font-weight: 500; }
+        nav a:hover { color: white; }
+        .breadcrumb { padding: 12px 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .ad-slot { background: #f1f5f9; border: 2px dashed var(--border); border-radius: 8px; padding: 20px; text-align: center; color: var(--text-light); font-size: 0.85rem; margin: 24px auto; max-width: 728px; }
+        .hero { text-align: center; padding: 48px 20px 32px; }
+        .hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { color: var(--text-light); font-size: 1.1rem; max-width: 640px; margin: 0 auto; }
+        .calc-section { padding: 32px 0; }
+        .calc-card { background: var(--card); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 32px; max-width: 800px; margin: 0 auto; }
+        .calc-card h2 { font-size: 1.5rem; margin-bottom: 24px; text-align: center; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+        .form-group .hint { font-size: 0.75rem; color: var(--text-light); margin-bottom: 4px; }
+        .input-wrap { position: relative; }
+        .input-wrap input, .input-wrap select {
+            width: 100%; padding: 12px 14px; border: 2px solid var(--border); border-radius: 10px;
+            font-size: 1rem; font-family: inherit; transition: border-color 0.2s; background: white;
+        }
+        .input-wrap input:focus, .input-wrap select:focus { outline: none; border-color: var(--primary); }
+        .unit-label { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-light); font-size: 0.85rem; pointer-events: none; }
+        .btn-calc {
+            display: block; width: 100%; padding: 14px; margin-top: 24px;
+            background: var(--primary); color: white; border: none; border-radius: 12px;
+            font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s;
+        }
+        .btn-calc:hover { background: var(--primary-dark); }
+        .input-mode { display: flex; gap: 8px; margin-bottom: 20px; justify-content: center; }
+        .input-mode button { padding: 8px 20px; border-radius: 8px; border: 2px solid var(--border); background: white; font-family: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .input-mode button.active { background: var(--primary); color: white; border-color: var(--primary); }
+        .results { display: none; margin-top: 28px; animation: fadeIn 0.4s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+        .result-box { background: #f0f9ff; border-radius: 12px; padding: 20px; text-align: center; }
+        .result-box.highlight { background: #ecfdf5; border: 2px solid var(--success); }
+        .result-box .label { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+        .result-box .value { font-size: 1.8rem; font-weight: 700; color: var(--text); margin-top: 4px; }
+        .result-box .sub { font-size: 0.85rem; color: var(--text-light); margin-top: 2px; }
+        .share-row { display: flex; gap: 12px; justify-content: center; margin-top: 20px; }
+        .share-row button { padding: 8px 20px; border-radius: 8px; border: 2px solid var(--border); background: white; font-family: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: border-color 0.2s; }
+        .share-row button:hover { border-color: var(--primary); color: var(--primary); }
+        .info-section { padding: 48px 0; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+        .info-card { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .info-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--primary); }
+        .info-card p, .info-card li { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+        .info-card ul { padding-left: 20px; }
+        .info-card li { margin-bottom: 6px; }
+        .info-card table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.85rem; }
+        .info-card th, .info-card td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+        .info-card th { font-weight: 600; color: var(--text); }
+        .info-card td { color: var(--text-light); }
+        .faq-section { padding: 48px 0; background: white; }
+        .faq-section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 32px; }
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--border); }
+        .faq-q { padding: 18px 0; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-q.open::after { content: '−'; }
+        .faq-a { padding: 0 0 18px; color: var(--text-light); font-size: 0.9rem; display: none; line-height: 1.7; }
+        .faq-a.open { display: block; }
+        .content-section { padding: 48px 0; }
+        .content-section .container { max-width: 800px; }
+        .content-section h2 { font-size: 1.5rem; margin-bottom: 16px; }
+        .content-section h3 { font-size: 1.15rem; margin: 24px 0 10px; color: var(--primary); }
+        .content-section p { color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-bottom: 14px; }
+        .content-section ol, .content-section ul { padding-left: 24px; margin-bottom: 14px; }
+        .content-section li { color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-bottom: 4px; }
+        footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 32px 0; text-align: center; font-size: 0.85rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        @media (max-width: 768px) { .hero h1 { font-size: 1.6rem; } .calc-card { padding: 20px; } nav { display: none; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">HowMuch<span>Flooring</span>.com</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/tile-calculator.html">Tile</a>
+                <a href="/hardwood-calculator.html">Hardwood</a>
+                <a href="/vinyl-calculator.html">Vinyl</a>
+                <a href="/carpet-calculator.html">Carpet</a>
+                <a href="/laminate-calculator.html">Laminate</a>
+                <a href="/paint-calculator.html">Paint</a>
+                <a href="/backsplash-calculator.html">Backsplash</a>
+                <a href="/baseboard-calculator.html">Baseboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a> &rsaquo; Baseboard Calculator
+        </div>
+    </div>
+
+    <section class="hero">
+        <h1>Baseboard <span>Calculator</span></h1>
+        <p>Calculate how much baseboard molding you need — in linear feet, number of pieces, inside/outside corners, and miter cuts. Plus cost estimates.</p>
+    </section>
+
+    <div class="ad-slot">[ Ad Space — 728×90 ]</div>
+
+    <section class="calc-section">
+        <div class="calc-card">
+            <h2>📏 Calculate Your Baseboard</h2>
+
+            <div class="input-mode">
+                <button class="active" id="modeRoom" onclick="setMode('room')">Room Dimensions</button>
+                <button id="modePerimeter" onclick="setMode('perimeter')">Perimeter</button>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group" id="grpLength">
+                    <label for="roomLength">Room Length</label>
+                    <div class="input-wrap">
+                        <input type="number" id="roomLength" placeholder="12" step="any" min="0">
+                        <span class="unit-label">ft</span>
+                    </div>
+                </div>
+                <div class="form-group" id="grpWidth">
+                    <label for="roomWidth">Room Width</label>
+                    <div class="input-wrap">
+                        <input type="number" id="roomWidth" placeholder="12" step="any" min="0">
+                        <span class="unit-label">ft</span>
+                    </div>
+                </div>
+                <div class="form-group" id="grpPerimeter" style="display:none;">
+                    <label for="perimeter">Room Perimeter</label>
+                    <div class="input-wrap">
+                        <input type="number" id="perimeter" placeholder="48" step="any" min="0">
+                        <span class="unit-label">ft</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="numDoorways">Number of Doorways</label>
+                    <div class="input-wrap">
+                        <input type="number" id="numDoorways" placeholder="2" min="0" value="2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="doorwayWidth">Doorway Width</label>
+                    <div class="input-wrap">
+                        <input type="number" id="doorwayWidth" placeholder="3" step="0.1" min="0" value="3">
+                        <span class="unit-label">ft</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="boardLength">Baseboard Piece Length</label>
+                    <div class="input-wrap">
+                        <select id="boardLength">
+                            <option value="8" selected>8 ft (standard)</option>
+                            <option value="10">10 ft</option>
+                            <option value="12">12 ft</option>
+                            <option value="16">16 ft</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="boardHeight">Baseboard Height</label>
+                    <div class="input-wrap">
+                        <select id="boardHeight">
+                            <option value="3">3″ (standard)</option>
+                            <option value="3.25">3¼″</option>
+                            <option value="4">4″</option>
+                            <option value="5.25" selected>5¼″ (popular)</option>
+                            <option value="7.25">7¼″ (tall/elegant)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="insideCorners">Inside Corners</label>
+                    <div class="input-wrap">
+                        <input type="number" id="insideCorners" placeholder="4" min="0" value="4">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="outsideCorners">Outside Corners</label>
+                    <div class="input-wrap">
+                        <input type="number" id="outsideCorners" placeholder="0" min="0" value="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="priceFt">Price per Linear Foot <span class="hint">(optional)</span></label>
+                    <div class="input-wrap">
+                        <input type="number" id="priceFt" placeholder="1.50" step="0.01" min="0">
+                        <span class="unit-label">$/ft</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-calc" onclick="calculate()">Calculate Baseboard Needed</button>
+
+            <div class="results" id="results">
+                <div class="results-grid">
+                    <div class="result-box">
+                        <div class="label">Room Perimeter</div>
+                        <div class="value" id="resPerimeter">—</div>
+                        <div class="sub">linear feet</div>
+                    </div>
+                    <div class="result-box highlight">
+                        <div class="label">Baseboard Needed</div>
+                        <div class="value" id="resLinearFt">—</div>
+                        <div class="sub">linear feet</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Pieces to Buy</div>
+                        <div class="value" id="resPieces">—</div>
+                        <div class="sub" id="resPiecesSub">8 ft pieces</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Miter Cuts</div>
+                        <div class="value" id="resMiters">—</div>
+                        <div class="sub" id="resMitersSub">angle cuts</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Inside Corners</div>
+                        <div class="value" id="resInside">—</div>
+                        <div class="sub">coped joints</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Outside Corners</div>
+                        <div class="value" id="resOutside">—</div>
+                        <div class="sub">miter joints</div>
+                    </div>
+                    <div class="result-box" id="costBox" style="display:none;">
+                        <div class="label">Estimated Cost</div>
+                        <div class="value" id="resCost">—</div>
+                        <div class="sub">materials only</div>
+                    </div>
+                </div>
+                <div class="share-row">
+                    <button onclick="window.print()">🖨️ Print</button>
+                    <button onclick="shareResults()">📤 Share</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="ad-slot">[ Ad Space — 728×90 ]</div>
+
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📏 Baseboard Style Guide</h3>
+                    <table>
+                        <tr><th>Height</th><th>Style</th><th>Best For</th></tr>
+                        <tr><td>3″</td><td>Flat / Ranch</td><td>Budget, modern, low ceilings</td></tr>
+                        <tr><td>3¼″</td><td>Colonial</td><td>Standard rooms</td></tr>
+                        <tr><td>4″</td><td>Stepped</td><td>Transitional style</td></tr>
+                        <tr><td>5¼″</td><td>Ogee / Colonial</td><td>Most popular, versatile</td></tr>
+                        <tr><td>7¼″</td><td>Tall / Craftsman</td><td>High ceilings, formal rooms</td></tr>
+                    </table>
+                    <p style="margin-top:8px"><strong>Rule of thumb:</strong> Baseboard height should be 3–5% of your ceiling height.</p>
+                </div>
+                <div class="info-card">
+                    <h3>💰 Baseboard Costs (2025)</h3>
+                    <ul>
+                        <li><strong>MDF (primed):</strong> $0.60–$1.50/ft</li>
+                        <li><strong>Pine (finger-jointed):</strong> $0.80–$2.00/ft</li>
+                        <li><strong>Poplar (stain-grade):</strong> $1.50–$3.00/ft</li>
+                        <li><strong>Oak (solid):</strong> $2.50–$5.00/ft</li>
+                        <li><strong>PVC/Vinyl:</strong> $1.00–$3.00/ft</li>
+                        <li><strong>Installation labor:</strong> $1.50–$4.00/ft</li>
+                        <li><strong>Paint/caulk/nails:</strong> ~$0.25/ft</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>🔨 Installation Tips</h3>
+                    <ul>
+                        <li>Use a stud finder and nail into studs (every 16″) with 2″ finish nails or a brad nailer</li>
+                        <li>For inside corners, use coped joints instead of miters — they stay tight even as walls shift</li>
+                        <li>For outside corners, use 45° miter cuts and glue the joint</li>
+                        <li>Leave a 1/16″ gap at the floor for expansion (caulk or shoe molding covers it)</li>
+                        <li>Acclimate baseboard in the room for 48 hours before installing</li>
+                        <li>Fill nail holes with wood putty, sand, and touch up paint</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>📐 How to Measure for Baseboard</h3>
+                    <ul>
+                        <li><strong>Step 1:</strong> Measure each wall separately with a tape measure</li>
+                        <li><strong>Step 2:</strong> Subtract the width of each doorway opening</li>
+                        <li><strong>Step 3:</strong> Add all walls together for total linear feet</li>
+                        <li><strong>Step 4:</strong> Add 10% for waste (cuts, miters, mistakes)</li>
+                        <li><strong>Step 5:</strong> Count inside and outside corners for miter planning</li>
+                    </ul>
+                    <p style="margin-top:8px">For multiple rooms, calculate each room separately to plan piece lengths efficiently and minimize waste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>How to Calculate Baseboard for a Room</h2>
+            <p>Baseboard molding runs along the bottom of your walls where they meet the floor. It protects the wall from scuffs and hides the expansion gap between flooring and drywall. Getting the right amount means understanding your room's perimeter, doorways, and corner types.</p>
+
+            <h3>Step 1: Find the Room Perimeter</h3>
+            <p>For a rectangular room, the perimeter is simply 2 × (length + width). A 12×14-foot room has a perimeter of 52 feet. For L-shaped or irregular rooms, measure each wall segment individually and add them up. Our calculator supports both methods — enter room dimensions or a direct perimeter measurement.</p>
+
+            <h3>Step 2: Subtract Doorways</h3>
+            <p>You don't need baseboard across doorway openings. A standard interior door opening is about 3 feet wide. Subtract 3 feet per doorway from your total perimeter. Wider openings like double doors or archways should be measured individually. Remember that each side of a doorway creates a butt joint (straight cut), not a miter.</p>
+
+            <h3>Step 3: Count Your Corners</h3>
+            <p>A standard rectangular room has 4 inside corners. Each inside corner requires a coped joint (one piece cut square, the other cut to match the profile). Outside corners — like those around a kitchen island or bump-out — require 45-degree miter cuts on both pieces. Count each type separately so you can plan your cuts.</p>
+
+            <h3>Step 4: Calculate Pieces and Add Waste</h3>
+            <p>Baseboard typically comes in 8-foot lengths (also available in 10, 12, and 16 feet). Divide your total linear feet by the piece length and round up. Add 10% for waste from miter cuts, mistakes, and fitting. It's always better to have an extra piece than to make a second trip to the store — especially with stained or specialty moldings where batch matching matters.</p>
+
+            <h3>Choosing the Right Baseboard Height</h3>
+            <p>Baseboard height should be proportional to your ceiling height. For standard 8-foot ceilings, 3″ to 5¼″ baseboards look great. Rooms with 9–10 foot ceilings benefit from 5¼″ to 7¼″ baseboards. Very tall ceilings (12+ feet) in formal rooms can handle 8–12 inch baseboards. The most popular height across all homes is 5¼ inches — it suits most styles and ceiling heights.</p>
+
+            <h3>Baseboard Material Comparison</h3>
+            <p><strong>MDF</strong> is the most affordable and widely used material for painted baseboards. It cuts cleanly, accepts paint well, and doesn't warp or have knots. <strong>Pine</strong> (finger-jointed or solid) is lightweight and easy to work with — ideal for stained or painted finishes. <strong>PVC</strong> is waterproof and perfect for bathrooms, laundry rooms, and basements where moisture is a concern. <strong>Hardwood</strong> (oak, maple, poplar) is premium and best suited for stained finishes that match hardwood floors.</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">How much baseboard do I need for a 12×12 room?</div>
+                    <div class="faq-a">A 12×12 room has a perimeter of 48 linear feet. Subtract about 3 feet for each standard doorway (typically 1–2 doors). So you need roughly 42–45 linear feet of baseboard. Since standard pieces are 8 feet long, you'd need 6 pieces (48 ft). Always buy an extra piece for cutting waste and miter mistakes.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">What height baseboard should I use?</div>
+                    <div class="faq-a">For standard 8-foot ceilings, 3-inch to 5.25-inch baseboards are most common. Rooms with 9–10 foot ceilings look best with 5.25-inch to 7.25-inch baseboards. Taller baseboards create a more elegant, traditional look. The general rule is: taller ceilings = taller baseboards. The 5¼-inch profile is by far the most popular choice for modern homes.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">What type of baseboard is best for my home?</div>
+                    <div class="faq-a">MDF (medium-density fiberboard) is the most popular choice — it's affordable ($0.60–$1.50/ft), paintable, and doesn't warp. Solid pine or poplar is ideal if you want a stained finish. PVC/vinyl baseboards are waterproof and best for bathrooms, kitchens, and basements. Hardwood baseboards are premium but can be stained to match wood floors beautifully.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">How do I cut baseboard corners?</div>
+                    <div class="faq-a">Inside corners: Use a coped joint — cut one piece square against the wall, then use a coping saw to back-cut the profile of the second piece so it fits snugly over the first. This method accommodates walls that aren't perfectly square. Outside corners: Cut both pieces at 45 degrees with a miter saw. Glue the joint and nail both sides. Always test-fit before securing.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="ad-slot">[ Ad Space — 728×90 ]</div>
+
+    <footer>
+        <div class="container">
+            <p style="margin-bottom:12px"><strong>Calculators:</strong>
+                <a href="/tile-calculator.html">Tile</a> ·
+                <a href="/hardwood-calculator.html">Hardwood</a> ·
+                <a href="/vinyl-calculator.html">Vinyl</a> ·
+                <a href="/carpet-calculator.html">Carpet</a> ·
+                <a href="/laminate-calculator.html">Laminate</a> ·
+                <a href="/paint-calculator.html">Paint</a> ·
+                <a href="/backsplash-calculator.html">Backsplash</a> ·
+                <a href="/baseboard-calculator.html">Baseboard</a>
+            </p>
+            <p style="margin-bottom:12px"><strong>Room Guides:</strong>
+                <a href="/bathroom-flooring.html">Bathroom</a> ·
+                <a href="/kitchen-flooring.html">Kitchen</a> ·
+                <a href="/bedroom-flooring.html">Bedroom</a>
+            </p>
+            <p style="margin-bottom:12px"><strong>Guides:</strong>
+                <a href="/how-much-flooring-for-12x12-room.html">12×12 Room</a> ·
+                <a href="/flooring-cost-per-square-foot.html">Cost Per Sq Ft</a>
+            </p>
+            <p>&copy; 2025 HowMuchFlooring.com — Free Home Improvement Calculators</p>
+            <p style="margin-top:8px">Built with ❤️ to help homeowners plan smarter. Estimates are approximate — always verify with your contractor.</p>
+            <p style="margin-top:8px">🇧🇷 Reformando no Brasil? Visite <a href="https://quantopreciso.com" target="_blank" style="color:#fbbf24">QuantoPreciso.com</a> — calculadoras gratuitas para obra e reforma.</p>
+        </div>
+    </footer>
+
+    <script>
+        var currentMode = 'room';
+
+        function setMode(mode) {
+            currentMode = mode;
+            document.getElementById('modeRoom').classList.toggle('active', mode === 'room');
+            document.getElementById('modePerimeter').classList.toggle('active', mode === 'perimeter');
+            document.getElementById('grpLength').style.display = mode === 'room' ? '' : 'none';
+            document.getElementById('grpWidth').style.display = mode === 'room' ? '' : 'none';
+            document.getElementById('grpPerimeter').style.display = mode === 'perimeter' ? '' : 'none';
+        }
+
+        function toggleFaq(el) {
+            el.classList.toggle('open');
+            el.nextElementSibling.classList.toggle('open');
+        }
+
+        function shareResults() {
+            if (navigator.share) {
+                navigator.share({ title: 'Baseboard Calculator Results', url: window.location.href });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard!');
+            }
+        }
+
+        function calculate() {
+            var perimeterFt;
+
+            if (currentMode === 'room') {
+                var roomLength = parseFloat(document.getElementById('roomLength').value);
+                var roomWidth = parseFloat(document.getElementById('roomWidth').value);
+                if (!roomLength || !roomWidth || roomLength <= 0 || roomWidth <= 0) {
+                    alert('Please enter valid room dimensions.'); return;
+                }
+                perimeterFt = 2 * (roomLength + roomWidth);
+            } else {
+                perimeterFt = parseFloat(document.getElementById('perimeter').value);
+                if (!perimeterFt || perimeterFt <= 0) {
+                    alert('Please enter a valid perimeter.'); return;
+                }
+            }
+
+            var numDoorways = parseInt(document.getElementById('numDoorways').value) || 0;
+            var doorwayWidth = parseFloat(document.getElementById('doorwayWidth').value) || 3;
+            var boardLength = parseFloat(document.getElementById('boardLength').value);
+            var insideCorners = parseInt(document.getElementById('insideCorners').value) || 0;
+            var outsideCorners = parseInt(document.getElementById('outsideCorners').value) || 0;
+
+            var doorDeduction = numDoorways * doorwayWidth;
+            var linearFtNeeded = perimeterFt - doorDeduction;
+            if (linearFtNeeded < 0) linearFtNeeded = 0;
+
+            // Add 10% waste for cuts and miters
+            var wasteMultiplier = 1.10;
+            var totalLinearFt = linearFtNeeded * wasteMultiplier;
+            var pieces = Math.ceil(totalLinearFt / boardLength);
+
+            // Miter cuts: inside corners = 1 coped cut each, outside corners = 2 miter cuts each
+            var miterCuts = (insideCorners * 1) + (outsideCorners * 2);
+
+            document.getElementById('resPerimeter').textContent = perimeterFt.toFixed(1);
+            document.getElementById('resLinearFt').textContent = Math.ceil(totalLinearFt);
+            document.getElementById('resPieces').textContent = pieces;
+            document.getElementById('resPiecesSub').textContent = boardLength + ' ft pieces';
+            document.getElementById('resMiters').textContent = miterCuts;
+            document.getElementById('resMitersSub').textContent = insideCorners + ' coped + ' + (outsideCorners * 2) + ' mitered';
+            document.getElementById('resInside').textContent = insideCorners;
+            document.getElementById('resOutside').textContent = outsideCorners;
+
+            var priceFt = parseFloat(document.getElementById('priceFt').value);
+            var costBox = document.getElementById('costBox');
+            if (priceFt && priceFt > 0) {
+                var totalCost = pieces * boardLength * priceFt;
+                costBox.style.display = '';
+                document.getElementById('resCost').textContent = '$' + totalCost.toFixed(0);
+            } else {
+                costBox.style.display = 'none';
+            }
+
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>

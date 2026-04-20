@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CMBC8WTFD"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6CMBC8WTFD');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backsplash Calculator — How Many Tiles for Your Backsplash?</title>
+    <meta name="description" content="Free backsplash tile calculator. Calculate how many tiles you need for a kitchen or bathroom backsplash. Covers subway tile, herringbone, grout, adhesive, and cost estimates for 2025.">
+    <link rel="canonical" href="https://howmuchflooring.com/backsplash-calculator.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Backsplash Calculator",
+        "url": "https://howmuchflooring.com/backsplash-calculator.html",
+        "description": "Free backsplash tile calculator. Calculate how many tiles, grout, and adhesive you need for a kitchen or bathroom backsplash.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How many tiles do I need for a kitchen backsplash?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A standard kitchen backsplash is roughly 30 sq ft (10 ft wide × 18 inches high, plus extra around the stove). Using 3×6 subway tiles at 0.125 sq ft each, you need about 264 tiles (including 10% waste). Buy by the box — most subway tile comes 80 tiles per box, so you'd need about 4 boxes." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the most popular backsplash tile pattern?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The classic running bond (brick) pattern using 3×6 subway tiles is by far the most popular. It's timeless, easy to install, and affordable. Herringbone is trending for a more modern look but requires more cuts and 15% extra tile. Stacked (straight) patterns offer a clean contemporary aesthetic." }
+            },
+            {
+                "@type": "Question",
+                "name": "How much grout do I need for a backsplash?",
+                "acceptedAnswer": { "@type": "Answer", "text": "For a 30 sq ft backsplash with 3×6 subway tiles and 1/16-inch grout lines, you need about 3–4 lbs of unsanded grout. Wider grout lines (1/8 inch) use roughly double. A single 10 lb bag of grout is enough for most kitchen backsplashes with standard spacing." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I install a backsplash over existing tile?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can tile over existing tile if the surface is in good condition — firmly attached, no cracks, and reasonably flat. Sand the old tile lightly for adhesion, clean thoroughly, and use a modified thinset. Note that this adds thickness, so you may need to adjust outlets and trim." }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://howmuchflooring.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Backsplash Calculator", "item": "https://howmuchflooring.com/backsplash-calculator.html" }
+        ]
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --success: #16a34a;
+            --accent: #f59e0b;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        header { background: linear-gradient(135deg, #1e3a5f, #2563eb); color: white; padding: 16px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3rem; font-weight: 700; text-decoration: none; color: white; }
+        .logo span { color: #f59e0b; }
+        nav a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 24px; font-size: 0.9rem; font-weight: 500; }
+        nav a:hover { color: white; }
+        .breadcrumb { padding: 12px 0; font-size: 0.85rem; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .ad-slot { background: #f1f5f9; border: 2px dashed var(--border); border-radius: 8px; padding: 20px; text-align: center; color: var(--text-light); font-size: 0.85rem; margin: 24px auto; max-width: 728px; }
+        .hero { text-align: center; padding: 48px 20px 32px; }
+        .hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { color: var(--text-light); font-size: 1.1rem; max-width: 640px; margin: 0 auto; }
+        .calc-section { padding: 32px 0; }
+        .calc-card { background: var(--card); border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); padding: 32px; max-width: 800px; margin: 0 auto; }
+        .calc-card h2 { font-size: 1.5rem; margin-bottom: 24px; text-align: center; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label { font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+        .form-group .hint { font-size: 0.75rem; color: var(--text-light); margin-bottom: 4px; }
+        .input-wrap { position: relative; }
+        .input-wrap input, .input-wrap select {
+            width: 100%; padding: 12px 14px; border: 2px solid var(--border); border-radius: 10px;
+            font-size: 1rem; font-family: inherit; transition: border-color 0.2s; background: white;
+        }
+        .input-wrap input:focus, .input-wrap select:focus { outline: none; border-color: var(--primary); }
+        .unit-label { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-light); font-size: 0.85rem; pointer-events: none; }
+        .btn-calc {
+            display: block; width: 100%; padding: 14px; margin-top: 24px;
+            background: var(--primary); color: white; border: none; border-radius: 12px;
+            font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s;
+        }
+        .btn-calc:hover { background: var(--primary-dark); }
+        .results { display: none; margin-top: 28px; animation: fadeIn 0.4s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+        .result-box { background: #f0f9ff; border-radius: 12px; padding: 20px; text-align: center; }
+        .result-box.highlight { background: #ecfdf5; border: 2px solid var(--success); }
+        .result-box .label { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+        .result-box .value { font-size: 1.8rem; font-weight: 700; color: var(--text); margin-top: 4px; }
+        .result-box .sub { font-size: 0.85rem; color: var(--text-light); margin-top: 2px; }
+        .share-row { display: flex; gap: 12px; justify-content: center; margin-top: 20px; }
+        .share-row button { padding: 8px 20px; border-radius: 8px; border: 2px solid var(--border); background: white; font-family: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: border-color 0.2s; }
+        .share-row button:hover { border-color: var(--primary); color: var(--primary); }
+        .info-section { padding: 48px 0; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+        .info-card { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .info-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--primary); }
+        .info-card p, .info-card li { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+        .info-card ul { padding-left: 20px; }
+        .info-card li { margin-bottom: 6px; }
+        .info-card table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.85rem; }
+        .info-card th, .info-card td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+        .info-card th { font-weight: 600; color: var(--text); }
+        .info-card td { color: var(--text-light); }
+        .faq-section { padding: 48px 0; background: white; }
+        .faq-section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 32px; }
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--border); }
+        .faq-q { padding: 18px 0; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--primary); transition: transform 0.2s; }
+        .faq-q.open::after { content: '−'; }
+        .faq-a { padding: 0 0 18px; color: var(--text-light); font-size: 0.9rem; display: none; line-height: 1.7; }
+        .faq-a.open { display: block; }
+        .content-section { padding: 48px 0; }
+        .content-section .container { max-width: 800px; }
+        .content-section h2 { font-size: 1.5rem; margin-bottom: 16px; }
+        .content-section h3 { font-size: 1.15rem; margin: 24px 0 10px; color: var(--primary); }
+        .content-section p { color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-bottom: 14px; }
+        .content-section ol, .content-section ul { padding-left: 24px; margin-bottom: 14px; }
+        .content-section li { color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-bottom: 4px; }
+        footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 32px 0; text-align: center; font-size: 0.85rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        @media (max-width: 768px) { .hero h1 { font-size: 1.6rem; } .calc-card { padding: 20px; } nav { display: none; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">HowMuch<span>Flooring</span>.com</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/tile-calculator.html">Tile</a>
+                <a href="/hardwood-calculator.html">Hardwood</a>
+                <a href="/vinyl-calculator.html">Vinyl</a>
+                <a href="/carpet-calculator.html">Carpet</a>
+                <a href="/laminate-calculator.html">Laminate</a>
+                <a href="/paint-calculator.html">Paint</a>
+                <a href="/backsplash-calculator.html">Backsplash</a>
+                <a href="/baseboard-calculator.html">Baseboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a> &rsaquo; Backsplash Calculator
+        </div>
+    </div>
+
+    <section class="hero">
+        <h1>Backsplash <span>Calculator</span></h1>
+        <p>Calculate exactly how many tiles, grout, and adhesive you need for your kitchen or bathroom backsplash — including waste for cuts and patterns.</p>
+    </section>
+
+    <div class="ad-slot">[ Ad Space — 728×90 ]</div>
+
+    <section class="calc-section">
+        <div class="calc-card">
+            <h2>🧱 Calculate Your Backsplash</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="bsLength">Backsplash Length</label>
+                    <div class="input-wrap">
+                        <input type="number" id="bsLength" placeholder="10" step="any" min="0">
+                        <span class="unit-label">ft</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bsHeightFt">Backsplash Height (feet)</label>
+                    <div class="input-wrap">
+                        <input type="number" id="bsHeightFt" placeholder="1" step="1" min="0" value="1">
+                        <span class="unit-label">ft</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bsHeightIn">+ Additional Inches</label>
+                    <div class="input-wrap">
+                        <input type="number" id="bsHeightIn" placeholder="6" step="any" min="0" max="11" value="6">
+                        <span class="unit-label">in</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tileSize">Tile Size</label>
+                    <div class="input-wrap">
+                        <select id="tileSize">
+                            <option value="3x6">3×6 in (Subway)</option>
+                            <option value="4x4">4×4 in</option>
+                            <option value="4x8">4×8 in</option>
+                            <option value="4x12">4×12 in</option>
+                            <option value="6x6">6×6 in</option>
+                            <option value="2x2">2×2 in (Mosaic)</option>
+                            <option value="1x1">1×1 in (Penny)</option>
+                            <option value="3x12">3×12 in</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pattern">Tile Pattern</label>
+                    <div class="input-wrap">
+                        <select id="pattern">
+                            <option value="standard">Running Bond / Standard</option>
+                            <option value="herringbone">Herringbone</option>
+                            <option value="stacked">Stacked (Straight)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="waste">Waste Factor</label>
+                    <div class="input-wrap">
+                        <select id="waste">
+                            <option value="0.10" selected>10% (standard)</option>
+                            <option value="0.15">15% (herringbone / complex)</option>
+                            <option value="0.20">20% (diagonal / first-timer)</option>
+                            <option value="0.05">5% (simple straight cuts)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tilesPerBox">Tiles per Box <span class="hint">(optional)</span></label>
+                    <div class="input-wrap">
+                        <input type="number" id="tilesPerBox" placeholder="40" min="1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="priceSqFt">Price per sq ft <span class="hint">(optional)</span></label>
+                    <div class="input-wrap">
+                        <input type="number" id="priceSqFt" placeholder="8.00" step="0.01" min="0">
+                        <span class="unit-label">$/sqft</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-calc" onclick="calculate()">Calculate Backsplash Tiles</button>
+
+            <div class="results" id="results">
+                <div class="results-grid">
+                    <div class="result-box">
+                        <div class="label">Backsplash Area</div>
+                        <div class="value" id="resArea">—</div>
+                        <div class="sub">sq ft</div>
+                    </div>
+                    <div class="result-box highlight">
+                        <div class="label">Tiles Needed</div>
+                        <div class="value" id="resTiles">—</div>
+                        <div class="sub" id="resTilesSub">tiles (incl. waste)</div>
+                    </div>
+                    <div class="result-box" id="boxesBox">
+                        <div class="label">Boxes to Buy</div>
+                        <div class="value" id="resBoxes">—</div>
+                        <div class="sub" id="resBoxesSub">boxes</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Grout Needed</div>
+                        <div class="value" id="resGrout">—</div>
+                        <div class="sub">lbs (unsanded)</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="label">Thinset Adhesive</div>
+                        <div class="value" id="resAdhesive">—</div>
+                        <div class="sub">lbs</div>
+                    </div>
+                    <div class="result-box" id="costBox" style="display:none;">
+                        <div class="label">Estimated Cost</div>
+                        <div class="value" id="resCost">—</div>
+                        <div class="sub">tile only</div>
+                    </div>
+                </div>
+                <div class="share-row">
+                    <button onclick="window.print()">🖨️ Print</button>
+                    <button onclick="shareResults()">📤 Share</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="ad-slot">[ Ad Space — 728×90 ]</div>
+
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🧱 Popular Backsplash Materials</h3>
+                    <table>
+                        <tr><th>Material</th><th>Cost/sq ft</th><th>Best For</th></tr>
+                        <tr><td>Ceramic subway</td><td>$2–$8</td><td>Budget-friendly classic</td></tr>
+                        <tr><td>Porcelain</td><td>$5–$15</td><td>Durability, moisture</td></tr>
+                        <tr><td>Glass mosaic</td><td>$8–$25</td><td>Modern accent</td></tr>
+                        <tr><td>Natural stone</td><td>$10–$30</td><td>Luxury kitchens</td></tr>
+                        <tr><td>Peel-and-stick</td><td>$3–$12</td><td>Rentals, quick DIY</td></tr>
+                    </table>
+                </div>
+                <div class="info-card">
+                    <h3>📐 Pattern Waste Factors</h3>
+                    <ul>
+                        <li><strong>Running bond (brick):</strong> 10% waste — offset rows require end cuts on alternating rows</li>
+                        <li><strong>Stacked (straight):</strong> 5–8% waste — simplest pattern, minimal cuts</li>
+                        <li><strong>Herringbone:</strong> 15% waste — angled cuts along all edges</li>
+                        <li><strong>Diagonal:</strong> 15–20% waste — every edge tile needs a cut</li>
+                        <li><strong>Chevron:</strong> 20% waste — precise angle cuts throughout</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>🔧 Installation Tips</h3>
+                    <ul>
+                        <li>Start from the center of the backsplash and work outward for symmetry</li>
+                        <li>Use tile spacers (1/16″ for subway, 1/8″ for larger tiles) for consistent grout lines</li>
+                        <li>Use unsanded grout for grout lines under 1/8″; sanded grout for wider joints</li>
+                        <li>Apply thinset with a V-notch or 1/4″ square-notch trowel</li>
+                        <li>Let thinset cure 24 hours before grouting</li>
+                        <li>Seal grout with a penetrating sealer after 48–72 hours</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>📏 Standard Backsplash Dimensions</h3>
+                    <ul>
+                        <li><strong>Standard height:</strong> 18 inches (countertop to upper cabinets)</li>
+                        <li><strong>Full height:</strong> 36–40 inches (countertop to ceiling)</li>
+                        <li><strong>Behind stove:</strong> Often extended to hood height (30–36 in)</li>
+                        <li><strong>Bathroom vanity:</strong> 4–6 inches above sink</li>
+                    </ul>
+                    <p style="margin-top:8px">Measure each section separately if your backsplash has different heights (e.g., behind the stove vs. counter areas).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>How to Calculate Backsplash Tile</h2>
+            <p>Whether you're tackling a kitchen remodel or updating a bathroom vanity, calculating backsplash materials accurately saves money and avoids frustrating mid-project runs to the tile store. Here's a complete guide to measuring and estimating your backsplash project.</p>
+
+            <h3>Step 1: Measure Your Backsplash Area</h3>
+            <p>Measure the total length of the backsplash in feet. Then measure the height — the distance from the countertop to the bottom of the upper cabinets (typically 18 inches). If you have areas with different heights (like behind the stove where it extends to the range hood), measure each section separately and add them up.</p>
+
+            <h3>Step 2: Choose Your Tile Size and Pattern</h3>
+            <p>The most popular backsplash tile is the classic 3×6 inch subway tile in a running bond pattern. Each tile covers 0.125 sq ft. Larger tiles like 4×12 mean fewer tiles and faster installation, while smaller mosaics create intricate designs but cost more and take longer to install. Herringbone patterns look stunning but require more cuts and 15% extra material.</p>
+
+            <h3>Step 3: Add Waste Factor</h3>
+            <p>Always order extra tile for cuts, breakage, and future repairs. For a standard running bond layout, 10% extra is sufficient. Herringbone and diagonal patterns need 15%. First-time DIYers should add 15–20% to account for learning curves. It's much better to have leftover tile than to discover your batch is discontinued mid-project.</p>
+
+            <h3>Step 4: Don't Forget Grout and Adhesive</h3>
+            <p>For backsplash tile, use unsanded grout for joints under 1/8 inch and sanded grout for wider joints. As a rule of thumb, you'll need about 1 lb of grout per 5 sq ft of subway tile. For thinset adhesive, plan about 2–3 lbs per square foot when applied with a proper notched trowel. Our calculator estimates these quantities automatically.</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">How many tiles do I need for a kitchen backsplash?</div>
+                    <div class="faq-a">A standard kitchen backsplash is roughly 30 sq ft (10 ft wide × 18 inches high, plus extra around the stove). Using 3×6 subway tiles at 0.125 sq ft each, you need about 264 tiles (including 10% waste). Most subway tile comes in boxes of 40–80 tiles, so you'd need about 4–7 boxes depending on the brand.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">What is the most popular backsplash tile pattern?</div>
+                    <div class="faq-a">The classic running bond (brick) pattern using 3×6 subway tiles is by far the most popular. It's timeless, easy to install, and affordable. Herringbone is trending for a more modern, dynamic look but requires more cuts and 15% extra tile. Stacked (straight) patterns offer a clean, contemporary aesthetic and are the simplest to install.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">How much grout do I need for a backsplash?</div>
+                    <div class="faq-a">For a 30 sq ft backsplash with 3×6 subway tiles and 1/16-inch grout lines, you need about 3–4 lbs of unsanded grout. Wider grout lines (1/8 inch) use roughly double. A single 10 lb bag of grout is enough for most kitchen backsplashes with standard spacing. Buy unsanded grout for lines under 1/8 inch.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Can I install a backsplash over existing tile?</div>
+                    <div class="faq-a">Yes, you can tile over existing tile if the surface is in good condition — firmly attached, no cracks, and reasonably flat. Sand the old tile lightly for adhesion, clean thoroughly, and use a modified thinset. Note that this adds thickness, so you may need to adjust electrical outlets and edge trim. Removing the old tile is preferred for the best long-term result.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="ad-slot">[ Ad Space — 728×90 ]</div>
+
+    <footer>
+        <div class="container">
+            <p style="margin-bottom:12px"><strong>Calculators:</strong>
+                <a href="/tile-calculator.html">Tile</a> ·
+                <a href="/hardwood-calculator.html">Hardwood</a> ·
+                <a href="/vinyl-calculator.html">Vinyl</a> ·
+                <a href="/carpet-calculator.html">Carpet</a> ·
+                <a href="/laminate-calculator.html">Laminate</a> ·
+                <a href="/paint-calculator.html">Paint</a> ·
+                <a href="/backsplash-calculator.html">Backsplash</a> ·
+                <a href="/baseboard-calculator.html">Baseboard</a>
+            </p>
+            <p style="margin-bottom:12px"><strong>Room Guides:</strong>
+                <a href="/bathroom-flooring.html">Bathroom</a> ·
+                <a href="/kitchen-flooring.html">Kitchen</a> ·
+                <a href="/bedroom-flooring.html">Bedroom</a>
+            </p>
+            <p style="margin-bottom:12px"><strong>Guides:</strong>
+                <a href="/how-much-flooring-for-12x12-room.html">12×12 Room</a> ·
+                <a href="/flooring-cost-per-square-foot.html">Cost Per Sq Ft</a>
+            </p>
+            <p>&copy; 2025 HowMuchFlooring.com — Free Home Improvement Calculators</p>
+            <p style="margin-top:8px">Built with ❤️ to help homeowners plan smarter. Estimates are approximate — always verify with your contractor.</p>
+            <p style="margin-top:8px">🇧🇷 Reformando no Brasil? Visite <a href="https://quantopreciso.com" target="_blank" style="color:#fbbf24">QuantoPreciso.com</a> — calculadoras gratuitas para obra e reforma.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(el) {
+            el.classList.toggle('open');
+            el.nextElementSibling.classList.toggle('open');
+        }
+
+        function shareResults() {
+            if (navigator.share) {
+                navigator.share({ title: 'Backsplash Calculator Results', url: window.location.href });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard!');
+            }
+        }
+
+        var tileSizes = {
+            '3x6':  { w: 3, h: 6 },
+            '4x4':  { w: 4, h: 4 },
+            '4x8':  { w: 4, h: 8 },
+            '4x12': { w: 4, h: 12 },
+            '6x6':  { w: 6, h: 6 },
+            '2x2':  { w: 2, h: 2 },
+            '1x1':  { w: 1, h: 1 },
+            '3x12': { w: 3, h: 12 }
+        };
+
+        function calculate() {
+            var bsLength = parseFloat(document.getElementById('bsLength').value);
+            var bsHeightFt = parseFloat(document.getElementById('bsHeightFt').value) || 0;
+            var bsHeightIn = parseFloat(document.getElementById('bsHeightIn').value) || 0;
+            var totalHeightFt = bsHeightFt + (bsHeightIn / 12);
+
+            if (!bsLength || bsLength <= 0 || totalHeightFt <= 0) {
+                alert('Please enter valid backsplash dimensions.'); return;
+            }
+
+            var areaSqFt = bsLength * totalHeightFt;
+            var wasteFactor = parseFloat(document.getElementById('waste').value);
+            var pattern = document.getElementById('pattern').value;
+
+            // Auto-adjust waste for herringbone if user hasn't changed it
+            if (pattern === 'herringbone' && wasteFactor < 0.15) wasteFactor = 0.15;
+
+            var totalArea = areaSqFt * (1 + wasteFactor);
+
+            var sizeKey = document.getElementById('tileSize').value;
+            var tile = tileSizes[sizeKey];
+            var tileAreaSqFt = (tile.w * tile.h) / 144;
+            var tilesNeeded = Math.ceil(totalArea / tileAreaSqFt);
+
+            var tilesPerBox = parseInt(document.getElementById('tilesPerBox').value);
+            var boxesBox = document.getElementById('boxesBox');
+            if (tilesPerBox && tilesPerBox > 0) {
+                var boxes = Math.ceil(tilesNeeded / tilesPerBox);
+                document.getElementById('resBoxes').textContent = boxes;
+                document.getElementById('resBoxesSub').textContent = boxes === 1 ? 'box' : 'boxes (' + tilesPerBox + ' tiles/box)';
+                boxesBox.style.display = '';
+            } else {
+                boxesBox.style.display = 'none';
+            }
+
+            // Grout: ~1 lb per 5 sq ft for subway, more for smaller tiles
+            var groutFactor = (tile.w <= 2) ? 0.35 : 0.2;
+            var groutLbs = Math.ceil(areaSqFt * groutFactor);
+
+            // Thinset adhesive: ~2.5 lbs per sq ft
+            var adhesiveLbs = Math.ceil(areaSqFt * 2.5);
+
+            document.getElementById('resArea').textContent = areaSqFt.toFixed(1);
+            document.getElementById('resTiles').textContent = tilesNeeded;
+            document.getElementById('resTilesSub').textContent = 'tiles (incl. ' + Math.round(wasteFactor * 100) + '% waste)';
+            document.getElementById('resGrout').textContent = groutLbs;
+            document.getElementById('resAdhesive').textContent = adhesiveLbs;
+
+            var priceSqFt = parseFloat(document.getElementById('priceSqFt').value);
+            var costBox = document.getElementById('costBox');
+            if (priceSqFt && priceSqFt > 0) {
+                var totalCost = totalArea * priceSqFt;
+                costBox.style.display = '';
+                document.getElementById('resCost').textContent = '$' + totalCost.toFixed(0);
+            } else {
+                costBox.style.display = 'none';
+            }
+
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
