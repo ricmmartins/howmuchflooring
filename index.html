@@ -12,14 +12,11 @@
 <meta name="twitter:card" content="summary">
 <meta property="og:title" content="How Much Flooring Do I Need? | Free Flooring Calculator">
 <meta property="og:description" content="Free flooring calculator — instantly estimate how much tile, hardwood, vinyl, carpet, or laminate flooring you need for any room. Get square footage, cost estimates, and waste factor included.">
+<meta property="og:url" content="https://howmuchflooring.com/">
     <title>How Much Flooring Do I Need? | Free Flooring Calculator</title>
     <meta name="description" content="Free flooring calculator — instantly estimate how much tile, hardwood, vinyl, carpet, or laminate flooring you need for any room. Get square footage, cost estimates, and waste factor included.">
     <meta name="keywords" content="flooring calculator, how much flooring do I need, tile calculator, hardwood flooring calculator, vinyl flooring calculator, carpet calculator, laminate flooring calculator, square footage calculator">
     <link rel="canonical" href="https://howmuchflooring.com/">
-    <meta property="og:title" content="How Much Flooring Do I Need? | Free Flooring Calculator">
-    <meta property="og:description" content="Instantly calculate how much flooring you need. Supports tile, hardwood, vinyl, carpet & laminate.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://howmuchflooring.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -53,8 +50,7 @@
         .hero h1 span { color: var(--primary); }
         .hero p { color: var(--text-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
 
-        /* Ad placeholder */
-        .ad-slot { background: #f1f5f9; border: 2px dashed var(--border); border-radius: 8px; padding: 20px; text-align: center; color: var(--text-light); font-size: 0.85rem; margin: 24px auto; max-width: 728px; }
+
 
         /* Calculator */
         .calc-section { padding: 32px 0; }
@@ -106,6 +102,26 @@
         .info-card p, .info-card li { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
         .info-card ul { padding-left: 20px; }
         .info-card li { margin-bottom: 6px; }
+
+        /* All Calculators Grid */
+        .all-calcs-section { padding: 48px 0; background: white; }
+        .all-calcs-section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 8px; }
+        .all-calcs-section .section-sub { text-align: center; color: var(--text-light); font-size: 1rem; margin-bottom: 32px; }
+        .grid-category { font-size: 1rem; font-weight: 600; color: var(--primary); margin: 24px 0 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .grid-category:first-of-type { margin-top: 0; }
+        .calcs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto 24px; }
+        .calc-link-card {
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            background: var(--card); border-radius: 12px; padding: 24px 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 2px solid var(--border);
+            text-decoration: none; color: var(--text); transition: all 0.2s;
+        }
+        .calc-link-card:hover { border-color: var(--primary); box-shadow: 0 4px 20px rgba(37,99,235,0.12); transform: translateY(-2px); }
+        .calc-link-card .calc-icon { font-size: 2rem; margin-bottom: 8px; }
+        .calc-link-card .calc-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+        .calc-link-card .calc-desc { font-size: 0.8rem; color: var(--text-light); line-height: 1.4; }
+        @media (max-width: 768px) { .calcs-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .calcs-grid { grid-template-columns: 1fr; } }
 
         /* FAQ */
         .faq-section { padding: 48px 0; background: white; }
@@ -163,6 +179,7 @@
         <div class="logo">HowMuch<span>Flooring</span>.com</div>
         <nav>
             <a href="#calculator">Calculator</a>
+            <a href="#all-calculators">All Tools</a>
             <a href="#guide">Guide</a>
             <a href="#faq">FAQ</a>
         </nav>
@@ -290,7 +307,7 @@
                 </ul>
             </div>
             <div class="info-card">
-                <h3>📊 Average Flooring Costs (2025)</h3>
+                <h3>📊 Average Flooring Costs (2026)</h3>
                 <ul>
                     <li><strong>Ceramic Tile:</strong> $1.50 – $5.00/sq ft</li>
                     <li><strong>Porcelain Tile:</strong> $3.00 – $8.00/sq ft</li>
@@ -318,6 +335,90 @@
                     <li>Factor in transition strips between rooms</li>
                 </ul>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="all-calcs-section" id="all-calculators">
+    <div class="container">
+        <h2>All Calculators &amp; Guides</h2>
+        <p class="section-sub">Everything you need for your flooring and home improvement projects</p>
+
+        <h3 class="grid-category">🔨 Flooring Calculators</h3>
+        <div class="calcs-grid">
+            <a href="/tile-calculator.html" class="calc-link-card">
+                <span class="calc-icon">🏗️</span>
+                <span class="calc-name">Tile Calculator</span>
+                <span class="calc-desc">Calculate tiles needed for any room</span>
+            </a>
+            <a href="/hardwood-calculator.html" class="calc-link-card">
+                <span class="calc-icon">🪵</span>
+                <span class="calc-name">Hardwood Calculator</span>
+                <span class="calc-desc">Estimate hardwood flooring materials</span>
+            </a>
+            <a href="/vinyl-calculator.html" class="calc-link-card">
+                <span class="calc-icon">📦</span>
+                <span class="calc-name">Vinyl Calculator</span>
+                <span class="calc-desc">Plan your vinyl/LVP installation</span>
+            </a>
+            <a href="/carpet-calculator.html" class="calc-link-card">
+                <span class="calc-icon">🧶</span>
+                <span class="calc-name">Carpet Calculator</span>
+                <span class="calc-desc">Figure out carpet square footage</span>
+            </a>
+            <a href="/laminate-calculator.html" class="calc-link-card">
+                <span class="calc-icon">🔲</span>
+                <span class="calc-name">Laminate Calculator</span>
+                <span class="calc-desc">Calculate laminate planks needed</span>
+            </a>
+        </div>
+
+        <h3 class="grid-category">🏠 Home Improvement Calculators</h3>
+        <div class="calcs-grid">
+            <a href="/paint-calculator.html" class="calc-link-card">
+                <span class="calc-icon">🎨</span>
+                <span class="calc-name">Paint Calculator</span>
+                <span class="calc-desc">How much paint for walls &amp; ceiling</span>
+            </a>
+            <a href="/backsplash-calculator.html" class="calc-link-card">
+                <span class="calc-icon">🧱</span>
+                <span class="calc-name">Backsplash Calculator</span>
+                <span class="calc-desc">Plan your kitchen or bath backsplash</span>
+            </a>
+            <a href="/baseboard-calculator.html" class="calc-link-card">
+                <span class="calc-icon">📏</span>
+                <span class="calc-name">Baseboard Calculator</span>
+                <span class="calc-desc">Measure baseboard &amp; molding needs</span>
+            </a>
+        </div>
+
+        <h3 class="grid-category">📖 Room Guides</h3>
+        <div class="calcs-grid">
+            <a href="/bathroom-flooring.html" class="calc-link-card">
+                <span class="calc-icon">🚿</span>
+                <span class="calc-name">Bathroom Flooring Guide</span>
+                <span class="calc-desc">Best flooring options for bathrooms</span>
+            </a>
+            <a href="/kitchen-flooring.html" class="calc-link-card">
+                <span class="calc-icon">🍳</span>
+                <span class="calc-name">Kitchen Flooring Guide</span>
+                <span class="calc-desc">Choose the right kitchen floor</span>
+            </a>
+            <a href="/bedroom-flooring.html" class="calc-link-card">
+                <span class="calc-icon">🛏️</span>
+                <span class="calc-name">Bedroom Flooring Guide</span>
+                <span class="calc-desc">Cozy bedroom flooring ideas</span>
+            </a>
+            <a href="/how-much-flooring-for-12x12-room.html" class="calc-link-card">
+                <span class="calc-icon">📐</span>
+                <span class="calc-name">12×12 Room Calculator</span>
+                <span class="calc-desc">Pre-calculated for a 12×12 room</span>
+            </a>
+            <a href="/flooring-cost-per-square-foot.html" class="calc-link-card">
+                <span class="calc-icon">💰</span>
+                <span class="calc-name">Flooring Cost Guide</span>
+                <span class="calc-desc">Compare costs per square foot</span>
+            </a>
         </div>
     </div>
 </section>
@@ -356,12 +457,17 @@
 
 <footer>
     <div class="container">
-        <p style="margin-bottom:12px"><strong>Calculators:</strong>
+        <p style="margin-bottom:12px"><strong>Flooring Calculators:</strong>
             <a href="/tile-calculator.html">Tile</a> ·
             <a href="/hardwood-calculator.html">Hardwood</a> ·
             <a href="/vinyl-calculator.html">Vinyl</a> ·
             <a href="/carpet-calculator.html">Carpet</a> ·
             <a href="/laminate-calculator.html">Laminate</a>
+        </p>
+        <p style="margin-bottom:12px"><strong>Home Improvement:</strong>
+            <a href="/paint-calculator.html">Paint</a> ·
+            <a href="/backsplash-calculator.html">Backsplash</a> ·
+            <a href="/baseboard-calculator.html">Baseboard</a>
         </p>
         <p style="margin-bottom:12px"><strong>Guides:</strong>
             <a href="/bathroom-flooring.html">Bathroom</a> ·
@@ -370,7 +476,7 @@
             <a href="/how-much-flooring-for-12x12-room.html">12×12 Room</a> ·
             <a href="/flooring-cost-per-square-foot.html">Cost Guide</a>
         </p>
-        <p>&copy; 2025 HowMuchFlooring.com — Free Flooring Calculator</p>
+        <p>&copy; 2026 HowMuchFlooring.com — Free Flooring Calculator</p>
         <p style="margin-top:8px">Built with ❤️ to help homeowners plan smarter. Estimates are approximate — always verify with your contractor.</p>
         <p style="margin-top:8px">🇧🇷 Reformando no Brasil? Visite <a href="https://quantopreciso.com" target="_blank" style="color:#fbbf24">QuantoPreciso.com</a> — calculadoras gratuitas para obra e reforma.</p>
     </div>
